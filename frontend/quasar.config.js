@@ -100,7 +100,7 @@ module.exports = configure(function (/* ctx */) {
             imports: [
               // presets
               'vue',
-              'vue-router',
+              VueRouterAutoImports,
               'quasar',
             ],
           },
