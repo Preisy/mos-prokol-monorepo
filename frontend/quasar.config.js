@@ -10,6 +10,7 @@
 
 const { configure } = require('quasar/wrappers');
 const path = require('path');
+const { VueRouterAutoImports } = require('unplugin-vue-router');
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -105,7 +106,7 @@ module.exports = configure(function (/* ctx */) {
             ],
           },
         ],
-        ['unocss'],
+        ['unocss/vite', {}],
         ['unplugin-vue-macros/vite', {}],
       ],
     },
