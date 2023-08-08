@@ -106,6 +106,7 @@ module.exports = configure(function (/* ctx */) {
           },
         ],
         ['unocss'],
+        ['unplugin-vue-macros/vite', {}],
       ],
     },
 
