@@ -58,6 +58,7 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useDialogPluginComponent: typeof import('quasar')['useDialogPluginComponent']
   const useFormChild: typeof import('quasar')['useFormChild']
+  const useLink: typeof import('vue-router')['useLink']
   const useMeta: typeof import('quasar')['useMeta']
   const useQuasar: typeof import('quasar')['useQuasar']
   const useRoute: typeof import('vue-router/auto')['useRoute']
