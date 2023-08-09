@@ -2,7 +2,16 @@
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["unplugin-vue-macros/macros-global" /* ... */]
+    "types": ["unplugin-vue-macros/macros-global" /* ... */],
+    "paths": {
+      "app/*": ["src/app/*"],
+      "processes/*": ["src/processes/*"],
+      "pages/*": ["src/pages/*"],
+      "widgets/*": ["src/widgets/*"],
+      "features/*": ["src/features/*"],
+      "entities/*": ["src/entities/*"],
+      "shared/*": ["src/shared/*"]
+    }
   },
   "vueCompilerOptions": {
     "plugins": [
@@ -15,6 +24,6 @@
       "@vue-macros/volar/export-props",
       "@vue-macros/volar/jsx-directive"
     ]
-  },
-  "include": ["typed-router.d.ts"]
+  }
+  // "include": ["typed-router.d.ts"]
 }

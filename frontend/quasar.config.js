@@ -29,10 +29,10 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ['i18n', 'axios'],
+    boot: ['i18n', 'axios', 'pinia'].map((boot) => '../app/boot/' + boot),
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
-    css: ['app.scss'],
+    css: ['../app/styles/app.scss'],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -56,23 +56,6 @@ module.exports = configure(function (/* ctx */) {
       },
 
       vueRouterMode: 'hash', // available values: 'hash', 'history'
-      // vueRouterBase,
-      // vueDevtools,
-      // vueOptionsAPI: false,
-
-      // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
-
-      // publicPath: '/',
-      // analyze: true,
-      // env: {},
-      // rawDefine: {}
-      // ignorePublicFolder: true,
-      // minify: false,
-      // polyfillModulePreload: true,
-      // distDir
-
-      // extendViteConf (viteConf) {},
-      // viteVuePluginOptions: {},
 
       vitePlugins: [
         [
@@ -104,17 +87,38 @@ module.exports = configure(function (/* ctx */) {
               VueRouterAutoImports,
               'quasar',
             ],
+            dts: './src/auto-imports.d.ts',
           },
         ],
         ['unocss/vite', {}],
         ['unplugin-vue-macros/vite', {}],
       ],
+
+      alias: {
+        app: path.join(__dirname, 'src/app'),
+        processes: path.join(__dirname, 'src/processes'),
+        pages: path.join(__dirname, 'src/pages'),
+        widgets: path.join(__dirname, 'src/widgets'),
+        features: path.join(__dirname, 'src/features'),
+        entities: path.join(__dirname, 'src/entities'),
+        shared: path.join(__dirname, 'src/shared'),
+      },
+
+      // env: useEnv(),
     },
 
-    // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
       // https: true
-      open: true, // opens browser window automatically
+      open: false, // opens browser window automatically
+      proxy: {
+        '/api': {
+          target: 'http://localhost:4000',
+          changeOrigin: true,
+          // secure: false,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+        // cors: false,
+      },
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
