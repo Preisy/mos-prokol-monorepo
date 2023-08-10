@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>HelloHome!</div>
+  <div bg-amber text-emerald p-10>HelloHome!</div>
 </template>
