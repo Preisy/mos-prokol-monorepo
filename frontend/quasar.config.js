@@ -8,9 +8,12 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
-const { configure } = require('quasar/wrappers');
+const { configure, route } = require('quasar/wrappers');
 const path = require('path');
-const { VueRouterAutoImports } = require('unplugin-vue-router');
+const {
+  VueRouterAutoImports,
+  getFileBasedRouteName,
+} = require('unplugin-vue-router');
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -73,6 +76,23 @@ module.exports = configure(function (/* ctx */) {
           },
         ],
         [
+          'unplugin-vue-router/vite',
+          {
+            routesFolder: 'src/pages',
+            extensions: ['.vue'],
+            dts: './src/typed-router.d.ts',
+            // getRouteName: (routeNode) => {
+            //   let baseName = getFileBasedRouteName(routeNode);
+            //   if (baseName.startsWith('P', 1))
+            //     baseName = '/' + baseName.substring(2);
+
+            //   baseName = baseName.toLocaleLowerCase();
+            //   console.log(baseName);
+            //   return baseName;
+            // },
+          },
+        ],
+        [
           'unplugin-auto-import/vite',
           {
             include: [
@@ -84,6 +104,7 @@ module.exports = configure(function (/* ctx */) {
             imports: [
               // presets
               'vue',
+              // '@vueuse/core',
               VueRouterAutoImports,
               'quasar',
             ],

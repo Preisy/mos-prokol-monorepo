@@ -25,5 +25,4 @@
       "@vue-macros/volar/jsx-directive"
     ]
   }
-  // "include": ["typed-router.d.ts"]
 }
