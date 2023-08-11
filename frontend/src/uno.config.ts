@@ -15,7 +15,6 @@ export default defineConfig<Theme>({
     presetIcons({
       collections: {},
       extraProperties: {
-        display: 'inline-block',
         'vertical-align': 'middle',
       },
     }),
