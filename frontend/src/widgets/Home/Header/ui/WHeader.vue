@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { SStructure } from 'shared/components/structure';
+import { SStructure } from 'shared/ui/structure';
+import { WLogo } from 'widgets/Home/Logo';
 </script>
 
 <template>
   <q-header class="header" bg-unset relative>
     <SStructure p-y-5.8>
+      <WLogo />
       <span text-sm m-x-3>A</span>
       <span text-sm m-x-3>B</span>
       <span text-sm m-x-3>C</span>
