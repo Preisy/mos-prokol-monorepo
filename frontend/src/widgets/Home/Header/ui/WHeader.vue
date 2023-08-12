@@ -16,18 +16,19 @@ const links = [
 
 <template>
   <q-header class="header" bg-unset relative>
-    <SStructure p-y-5.8>
-      <WLogo m-r-18 />
-      <div inline-block>
+    <SStructure p-y-5.8 flex flex-row justify-between items-center>
+      <WLogo />
+      <div>
         <WHeaderLink m-x-2.8 v-for="link of links" :key="link">
           {{ $t(`header.routes.${link}`) }}
         </WHeaderLink>
       </div>
-      <WPhoneNumber number="89215654388" inline-block />
+      <WPhoneNumber number="89215654388" />
     </SStructure>
     <q-img
       class="background"
       src="./assets/background.svg"
+      h-28
       absolute
       top-0
       z--1
