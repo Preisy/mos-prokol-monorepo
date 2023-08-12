@@ -1,15 +1,29 @@
 <script setup lang="ts">
 import { SStructure } from 'shared/ui/structure';
 import { WLogo } from 'widgets/Home/Logo';
+import WHeaderLink from './WHeaderLink.vue';
+import WPhoneNumber from './WPhoneNumber.vue';
+
+const links = [
+  'services',
+  'price',
+  'calculations',
+  'photo',
+  'stages',
+  'contacts',
+];
 </script>
 
 <template>
   <q-header class="header" bg-unset relative>
     <SStructure p-y-5.8>
-      <WLogo />
-      <span text-sm m-x-3>A</span>
-      <span text-sm m-x-3>B</span>
-      <span text-sm m-x-3>C</span>
+      <WLogo m-r-18 />
+      <div inline-block>
+        <WHeaderLink m-x-2.8 v-for="link of links" :key="link">
+          {{ $t(`header.routes.${link}`) }}
+        </WHeaderLink>
+      </div>
+      <WPhoneNumber number="89215654388" inline-block />
     </SStructure>
     <q-img
       class="background"

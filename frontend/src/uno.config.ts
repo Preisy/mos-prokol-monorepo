@@ -32,19 +32,17 @@ export default defineConfig<Theme>({
     },
   },
   preflights: [
-    {
-      getCSS: ({ theme }) => {
-        const middlePx = (a: string, b: string) =>
-          (parseInt(a) + parseInt(b)) / 2 + 'px';
-        const absDelta = (a: string, b: string) =>
-          Math.abs(parseInt(a) - parseInt(b));
-
-        const { sm: fontSm, md: fontMd, xl: fontXl } = theme.fontSize!;
-        const { sm, md, xl } = theme.breakpoints!;
-
-        return '';
-      },
-    },
+    // {
+    //   getCSS: ({ theme }) => {
+    //     const middlePx = (a: string, b: string) =>
+    //       (parseInt(a) + parseInt(b)) / 2 + 'px';
+    //     const absDelta = (a: string, b: string) =>
+    //       Math.abs(parseInt(a) - parseInt(b));
+    //     const { sm: fontSm, md: fontMd, xl: fontXl } = theme.fontSize!;
+    //     const { sm, md, xl } = theme.breakpoints!;
+    //     return '';
+    //   },
+    // },
   ],
   rules: [],
 });
