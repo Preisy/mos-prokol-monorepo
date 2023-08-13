@@ -69,6 +69,7 @@ module.exports = configure(function (/* ctx */) {
 
             // you need to set i18n resource including paths !
             include: path.resolve(__dirname, './src/i18n/**'),
+            defaultSFCLang: 'json',
           },
         ],
         [
