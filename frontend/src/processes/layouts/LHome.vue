@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { WAboutUs } from 'widgets/AboutUs';
+</script>
 
 <template>
-  <div bg-amber text-emerald p-10>HelloHome!</div>
+  <WAboutUs></WAboutUs>
 </template>
