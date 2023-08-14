@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { WAdvances, cardData } from 'widgets/Advances';
+</script>
 
 <template>
-  <div bg-amber text-emerald p-10>HelloHome!</div>
+  <WAdvances :cards="cardData"></WAdvances>
 </template>
