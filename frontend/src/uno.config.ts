@@ -19,10 +19,10 @@ export default defineConfig<Theme>({
     },
     fontSize: {
       sm: ['0.7rem', 'normal'],
-      base: ['0.9rem', '130%'],
-      md: ['1rem', '140%'],
+      base: ['0.9rem', '1.3'],
+      md: ['1rem', '1.4'],
       lg: ['1.5rem', '1.875rem'],
-      xl: ['2.5rem', '140%'],
+      xl: ['2.5rem', '1.4'],
       '2xl': ['6rem', '7.313rem'],
     },
     breakpoints: {
