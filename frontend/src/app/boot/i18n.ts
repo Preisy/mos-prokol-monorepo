@@ -1,6 +1,7 @@
 import { boot } from 'quasar/wrappers';
 import { createI18n } from 'vue-i18n';
 
+// eslint-disable-next-line boundaries/element-types
 import messages from 'app/i18n';
 
 export type MessageLanguages = keyof typeof messages;

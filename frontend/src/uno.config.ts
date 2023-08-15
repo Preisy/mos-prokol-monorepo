@@ -3,36 +3,26 @@ import {
   defineConfig,
   presetUno,
   presetAttributify,
-  presetIcons,
   transformerVariantGroup,
   transformerDirectives,
 } from 'unocss';
 
 export default defineConfig<Theme>({
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons({
-      collections: {},
-      extraProperties: {
-        display: 'inline-block',
-        'vertical-align': 'middle',
-      },
-    }),
-  ],
+  presets: [presetUno(), presetAttributify()],
   transformers: [transformerVariantGroup(), transformerDirectives()],
   theme: {
     colors: {
-      bg: '#FFF',
-      primary: '#4F62E5',
-      secondary: '#6BDA97',
-      tertiary: '#666666',
+      unset: 'unset',
+      primary: '#FCFCFC',
+      secondary: '#1A1A1A',
+      attractive: '#FCE078',
     },
     fontSize: {
-      sm: ['1.25rem', '1.56rem'],
-      base: ['1rem', '1.5rem'],
+      sm: ['0.7rem', 'normal'],
+      base: ['0.9rem', '1.3'],
+      md: ['1rem', '1.4'],
       lg: ['1.5rem', '1.875rem'],
-      xl: ['3rem', '3.657rem'],
+      xl: ['2.5rem', '1.4'],
       '2xl': ['6rem', '7.313rem'],
     },
     breakpoints: {
