@@ -10,7 +10,6 @@ module.exports = {
   parserOptions: {
     parser: require.resolve('@typescript-eslint/parser'),
     extraFileExtensions: ['.vue'],
-<<<<<<< HEAD
   },
 
   settings: {
@@ -19,8 +18,6 @@ module.exports = {
         alwaysTryTypes: true,
       },
     },
-=======
->>>>>>> 3ee22f9 (✨ Header widget)
   },
 
   env: {
@@ -49,11 +46,8 @@ module.exports = {
     // https://github.com/prettier/eslint-config-prettier#installation
     // usage with Prettier, provided by 'eslint-config-prettier'.
     'prettier',
-<<<<<<< HEAD
 
     '@feature-sliced',
-=======
->>>>>>> 3ee22f9 (✨ Header widget)
   ],
 
   plugins: [
