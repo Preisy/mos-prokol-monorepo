@@ -20,7 +20,7 @@ const result = {
 
 <template>
   <div text-base>
-    <span i-mdi-phone inline-block m-r-1 />
+    <q-icon name="phone" inline-block m-r-1 />
     <span text-gray> {{ result.country }} {{ result.region + ' ' }}</span>
     <span text-white>{{ result.remains }}</span>
   </div>
