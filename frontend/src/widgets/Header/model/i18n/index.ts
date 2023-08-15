@@ -1,7 +1,7 @@
 import enUS from './en';
 import ruRU from './ru';
 
-export default {
+export const THeader = {
   'en-US': enUS,
   'ru-RU': ruRU,
 };
