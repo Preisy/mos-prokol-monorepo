@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { WHeader } from 'widgets/Home/Header';
+import { WHeader } from 'widgets/Header';
 </script>
 
 <template>

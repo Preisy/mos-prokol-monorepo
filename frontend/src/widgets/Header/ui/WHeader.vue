@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { WLogo } from 'shared/ui/Logo';
 import { SStructure } from 'shared/ui/structure';
-import { WLogo } from 'widgets/Home/Logo';
 import WHeaderLink from './WHeaderLink.vue';
 import WPhoneNumber from './WPhoneNumber.vue';
 
