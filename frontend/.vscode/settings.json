@@ -6,8 +6,5 @@
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.configPath": "",
-  "[svg]": {
-    "editor.defaultFormatter": "jock.svg"
-  }
+  "prettier.configPath": ""
 }
