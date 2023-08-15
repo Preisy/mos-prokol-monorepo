@@ -3,22 +3,12 @@ import {
   defineConfig,
   presetUno,
   presetAttributify,
-  presetIcons,
   transformerVariantGroup,
   transformerDirectives,
 } from 'unocss';
 
 export default defineConfig<Theme>({
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons({
-      collections: {},
-      extraProperties: {
-        'vertical-align': 'middle',
-      },
-    }),
-  ],
+  presets: [presetUno(), presetAttributify()],
   transformers: [transformerVariantGroup(), transformerDirectives()],
   theme: {
     colors: {
