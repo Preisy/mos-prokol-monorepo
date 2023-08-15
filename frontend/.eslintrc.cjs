@@ -94,5 +94,8 @@ module.exports = {
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    'eol-last': always,
+    'no-trailing-spaces': true
   },
 };
