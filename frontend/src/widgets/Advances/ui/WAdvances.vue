@@ -1,24 +1,21 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { SPrettyHeader } from 'shared/ui/prettyHeader';
-import WAdvanceCard, { AdvanceCardProps } from './WAdvanceCard.vue';
+import WAdvanceCard from './WAdvanceCard.vue';
 
-interface AdvancesProps {
-  cards: AdvanceCardProps[];
-}
-defineProps<AdvancesProps>();
+const { tm } = useI18n();
 </script>
 
 <template>
   <div class="content-wrapper" bg-black overflow-hidden>
     <div class="structure" m-y-8>
-      <SPrettyHeader>наши преимущества</SPrettyHeader>
+      <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
       <div flex flex-row justify-between gap-x-6>
         <WAdvanceCard
           max-w-72
-          v-for="(card, index) of cards"
+          v-for="(card, index) of tm('advances.cards')"
           :key="index"
-          :main-text="card.mainText"
-          :sub-text="card.subText"
+          v-bind="card"
         />
       </div>
     </div>

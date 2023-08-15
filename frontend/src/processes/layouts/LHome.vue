@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { WAdvances, cardData } from 'widgets/Advances';
+import { WAdvances } from 'widgets/Advances';
 </script>
 
 <template>
-  <WAdvances :cards="cardData"></WAdvances>
+  <WAdvances></WAdvances>
 </template>
