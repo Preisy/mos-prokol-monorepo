@@ -13,8 +13,8 @@ export default defineConfig<Theme>({
   theme: {
     colors: {
       unset: 'unset',
-      dark: '#1A1A1A',
       primary: '#FCFCFC',
+      secondary: '#1A1A1A',
       attractive: '#FCE078',
     },
     fontSize: {
