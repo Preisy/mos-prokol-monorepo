@@ -6,12 +6,7 @@ export default boot(({ app }) => {
   const i18n = createI18n({
     locale: 'ru-RU',
     legacy: false,
-<<<<<<< HEAD
     messages: mergeI18n(),
-=======
-    globalInjection: true,
-    messages,
->>>>>>> 855f424 (✨ Header widget)
   });
 
   // Set i18n instance on app
