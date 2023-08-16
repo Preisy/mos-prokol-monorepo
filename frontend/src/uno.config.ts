@@ -16,6 +16,7 @@ export default defineConfig<Theme>({
       primary: '#FCFCFC',
       secondary: '#1A1A1A',
       attractive: '#FCE078',
+      attractive2: '#FFD743',
     },
     fontSize: {
       sm: ['0.7rem', 'normal'],
