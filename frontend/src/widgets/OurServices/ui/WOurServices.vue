@@ -1,37 +1,31 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { SCarousel } from 'shared/ui/carousel';
 import { SPrettyHeader } from 'shared/ui/prettyHeader';
 import { SStructure } from 'shared/ui/structure';
+import { images } from './assets';
 import WServiceSlide from './WServiceSlide.vue';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import WServiceSlideCard, {
   WServiceSlideCardProps,
 } from './WServiceSlideCard.vue';
 
-const slides: WServiceSlideCardProps[][] = [
-  [
-    {
-      imgSrc: 'https://loremflickr.com/320/240',
-      text: 'Бестраншейная прокладка водопровода',
-    },
-    {
-      imgSrc: 'https://loremflickr.com/320/240',
-      text: 'Бестраншейная прокладка газопровода',
-    },
-    { imgSrc: 'https://loremflickr.com/320/240', text: 'Установка колодцев' },
-  ],
-  [
-    {
-      imgSrc: 'https://loremflickr.com/320/240',
-      text: 'Абоба',
-    },
-    {
-      imgSrc: 'https://loremflickr.com/320/240',
-      text: 'Бестраншейная прокладка газопровода',
-    },
-    { imgSrc: 'https://loremflickr.com/320/240', text: 'Установка колодцев' },
-  ],
-];
+const { tm } = useI18n();
+
+const buildSlides = (slidesTextes: string[][]) =>
+  slidesTextes.map((slide: string[], slideIndex) => {
+    const res: WServiceSlideCardProps[] = [];
+    slide.forEach((cardText, cardIndex) =>
+      res.push({
+        text: cardText,
+        imgSrc: images[slideIndex * slide.length + cardIndex],
+      })
+    );
+    return res;
+  });
+
+const slides = buildSlides(tm('services.slides'));
+console.log(slides);
 </script>
 <template>
   <div class="content-wrapper" bg-black overflow-hidden>

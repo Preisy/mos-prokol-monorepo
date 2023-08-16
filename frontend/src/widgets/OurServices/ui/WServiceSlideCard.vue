@@ -8,11 +8,11 @@ defineProps<WServiceSlideCardProps>();
 </script>
 
 <template>
-  <div class="card" relative>
+  <div class="card" relative max-w-68>
     <div class="background" rounded-2 overflow-hidden text-0>
       <img :src="imgSrc" relative />
     </div>
-    <p absolute bottom-1 left-1 text-base text-primary font-700>{{ text }}</p>
+    <p absolute bottom-1 left-3.4 text-base text-primary font-700>{{ text }}</p>
   </div>
 </template>
 

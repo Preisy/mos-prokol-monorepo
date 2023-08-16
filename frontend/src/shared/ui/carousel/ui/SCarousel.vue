@@ -28,6 +28,7 @@ const click = (delta: number) => {
     </q-carousel>
 
     <div
+      v-if="length > 1"
       class="controls top-5/10"
       w-full
       flex
