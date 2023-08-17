@@ -26,7 +26,7 @@ const links = [
       <PhoneNumber gray-part="8 (921) " white-part="565 43 88" />
     </SStructure>
     <q-img
-      src="./assets/background.svg"
+      src="/widgets/WHeader/background.svg"
       h-28
       absolute
       top-0

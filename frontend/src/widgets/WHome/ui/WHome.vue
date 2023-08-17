@@ -8,7 +8,7 @@ const { tm } = useI18n();
 </script>
 
 <template>
-  <div class="content-wrapper" overflow-hidden>
+  <div class="content-wrapper" overflow-hidden relative>
     <SStructure my-70>
       <div class="advances" flex flex-row justify-end>
         <HomeChip v-for="card in tm('home.cards')" :key="card">
@@ -24,13 +24,13 @@ const { tm } = useI18n();
         <SBtn>{{ $t('home.btn') }}</SBtn>
       </div>
     </SStructure>
+    <img
+      src="/widgets/WHome/background.png"
+      absolute
+      w-full
+      h-full
+      top-0
+      z--1
+    />
   </div>
 </template>
-
-<style scoped lang="scss">
-.content-wrapper {
-  background: url('./assets/background.png') no-repeat;
-  background-size: cover;
-  background-position-x: center;
-}
-</style>

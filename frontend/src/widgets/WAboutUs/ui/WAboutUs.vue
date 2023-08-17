@@ -16,7 +16,7 @@ import { SStructure } from 'shared/ui/SStructure';
       </div>
     </SStructure>
     <img
-      src="./background.png"
+      src="/widgets/WAboutUs/background.png"
       absolute
       w-280
       z-0

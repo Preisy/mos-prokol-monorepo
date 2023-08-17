@@ -2,7 +2,6 @@
 
 <template>
   <div relative w-fit h-min text-center inline-block>
-    <!-- <img src="./background.svg" absolute /> -->
     <div
       class="w-9/10 left-5/100 shadow"
       rounded-2
