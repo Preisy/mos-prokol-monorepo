@@ -20,13 +20,9 @@ import { SStructure } from 'shared/ui/structure';
       absolute
       w-280
       z-0
-      class="top-15/100 right--80 rounded-5/10 _back"
+      brightness-50
+      right--80
+      class="top-15/100 rounded-5/10"
     />
   </div>
 </template>
-
-<style scoped lang="scss">
-._back {
-  filter: brightness(0.5);
-}
-</style>

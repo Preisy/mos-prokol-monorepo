@@ -26,18 +26,12 @@ const links = [
       <WPhoneNumber number="89215654388" />
     </SStructure>
     <q-img
-      class="background"
       src="./assets/background.svg"
       h-28
       absolute
       top-0
       z--1
+      bottom-drop-shadow
     ></q-img>
   </q-header>
 </template>
-
-<style scoped lang="scss">
-.background {
-  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.3));
-}
-</style>

@@ -5,6 +5,7 @@ import {
   presetAttributify,
   transformerVariantGroup,
   transformerDirectives,
+  toEscapedSelector,
 } from 'unocss';
 
 export default defineConfig<Theme>({
@@ -16,6 +17,9 @@ export default defineConfig<Theme>({
       primary: '#FCFCFC',
       secondary: '#1A1A1A',
       attractive: '#FCE078',
+      'attractive-2': '#ffd743', //b2
+      btnTextColor: '#574c1f',
+      btnShadow: '#e7c02f',
     },
     fontSize: {
       sm: ['0.7rem', 'normal'],
@@ -32,5 +36,28 @@ export default defineConfig<Theme>({
     },
   },
   preflights: [],
-  rules: [],
+  rules: [
+    [
+      'bottom-drop-shadow',
+      { filter: 'drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.3))' },
+    ],
+    [
+      'bg-gradient-yellow',
+      { background: 'linear-gradient(180deg, #fceb91 0%, #ffd743 100%);' },
+    ],
+    [
+      /^text-outline-(.+)$/,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      ([_, color], { theme, rawSelector }) => {
+        return `
+        ${toEscapedSelector(rawSelector)} {
+          --shadow-color: ${theme.colors?.[color]};
+          text-shadow: -1px -1px 0 var(--shadow-color), 0 -1px 0 var(--shadow-color),
+          1px -1px 0 var(--shadow-color), 1px 0 0 var(--shadow-color),
+          1px 1px 0 var(--shadow-color), 0 1px 0 var(--shadow-color),
+          -1px 1px 0 var(--shadow-color), -1px 0 0 var(--shadow-color);
+        }`;
+      },
+    ],
+  ],
 });
