@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { SPrettyHeader } from 'shared/ui/prettyHeader';
+import { SStructure } from 'shared/ui/structure';
 import WAdvanceCard from './WAdvanceCard.vue';
 
 const { tm } = useI18n();
@@ -8,7 +9,7 @@ const { tm } = useI18n();
 
 <template>
   <div class="content-wrapper" bg-black overflow-hidden>
-    <div class="structure" m-y-8>
+    <SStructure my-8>
       <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
       <div flex flex-row justify-between gap-x-6>
         <WAdvanceCard
@@ -18,6 +19,6 @@ const { tm } = useI18n();
           v-bind="card"
         />
       </div>
-    </div>
+    </SStructure>
   </div>
 </template>

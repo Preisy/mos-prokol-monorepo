@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { SPrettyHeader } from 'shared/ui/prettyHeader';
+import { SStructure } from 'shared/ui/structure';
 </script>
 <template>
   <div class="content-wrapper" bg-black overflow-hidden relative>
-    <div class="structure" m-y-50 relative z-1>
+    <SStructure my-50 relative z-1>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div class="descr w-6/10" text-white>
         <div class="chapter" m-b-6>
@@ -13,7 +14,7 @@ import { SPrettyHeader } from 'shared/ui/prettyHeader';
           {{ $t('about.desc.1') }}
         </div>
       </div>
-    </div>
+    </SStructure>
     <img
       src="./background.png"
       absolute

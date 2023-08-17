@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { SBtn } from 'shared/ui/button';
+import { SStructure } from 'shared/ui/structure';
 import WHomeChip from './WHomeChip.vue';
 
 const { tm } = useI18n();
@@ -8,7 +9,7 @@ const { tm } = useI18n();
 
 <template>
   <div class="content-wrapper" overflow-hidden>
-    <div structure m-y-70>
+    <SStructure my-70>
       <div class="advances" flex flex-row justify-end>
         <WHomeChip v-for="card in tm('home.cards')" :key="card">
           {{ card }}
@@ -22,7 +23,7 @@ const { tm } = useI18n();
       <div class="button" text-center m-t-4>
         <SBtn>{{ $t('home.btn') }}</SBtn>
       </div>
-    </div>
+    </SStructure>
   </div>
 </template>
 
