@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { WStages } from 'widgets/Stages';
+</script>
 
 <template>
-  <div bg-amber text-emerald p-10>HelloHome!</div>
+  <WStages></WStages>
 </template>
