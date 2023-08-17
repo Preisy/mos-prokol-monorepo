@@ -4,6 +4,7 @@
 <style scoped lang="scss">
 .structure {
   width: 80%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
