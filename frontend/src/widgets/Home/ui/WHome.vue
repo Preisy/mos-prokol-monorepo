@@ -20,7 +20,7 @@ const { tm } = useI18n();
           {{ $t('home.title') }}
         </span>
       </div>
-      <div class="button" text-center m-t-4>
+      <div class="button" text-center mt-4>
         <SBtn>{{ $t('home.btn') }}</SBtn>
       </div>
     </SStructure>

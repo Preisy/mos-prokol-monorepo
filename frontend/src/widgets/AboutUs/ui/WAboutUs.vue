@@ -7,7 +7,7 @@ import { SStructure } from 'shared/ui/structure';
     <SStructure my-50 relative z-1>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div class="descr w-6/10" text-white>
-        <div class="chapter" m-b-6>
+        <div class="chapter" mb-6>
           {{ $t('about.desc.0') }}
         </div>
         <div class="chapter">

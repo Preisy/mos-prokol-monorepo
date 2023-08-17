@@ -16,10 +16,10 @@ const links = [
 
 <template>
   <q-header class="header" bg-unset fixed>
-    <SStructure p-y-5.8 flex flex-row justify-between items-center>
+    <SStructure py-5.8 flex flex-row justify-between items-center>
       <WLogo />
       <div>
-        <WHeaderLink m-x-2.8 v-for="link of links" :key="link">
+        <WHeaderLink mx-2.8 v-for="link of links" :key="link">
           {{ $t(`header.routes.${link}`) }}
         </WHeaderLink>
       </div>

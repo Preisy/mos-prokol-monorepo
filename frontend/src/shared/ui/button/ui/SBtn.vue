@@ -20,8 +20,8 @@
       tracking-wider
       font-700
       leading-none
-      p-x-16
-      p-y-4
+      px-16
+      py-4
       rounded-2
       bg-gradient-yellow
       text-btn-text-color
