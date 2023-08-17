@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { SPrettyHeader } from 'shared/ui/prettyHeader';
-import { SStructure } from 'shared/ui/structure';
+import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
+import { SStructure } from 'shared/ui/SStructure';
 </script>
 <template>
   <div class="content-wrapper" bg-black overflow-hidden relative>

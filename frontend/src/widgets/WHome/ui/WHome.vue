@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { SBtn } from 'shared/ui/button';
-import { SStructure } from 'shared/ui/structure';
-import WHomeChip from './WHomeChip.vue';
+import { SBtn } from 'shared/ui/SButton';
+import { SStructure } from 'shared/ui/SStructure';
+import HomeChip from './HomeChip.vue';
 
 const { tm } = useI18n();
 </script>
@@ -11,9 +11,9 @@ const { tm } = useI18n();
   <div class="content-wrapper" overflow-hidden>
     <SStructure my-70>
       <div class="advances" flex flex-row justify-end>
-        <WHomeChip v-for="card in tm('home.cards')" :key="card">
+        <HomeChip v-for="card in tm('home.cards')" :key="card">
           {{ card }}
-        </WHomeChip>
+        </HomeChip>
       </div>
       <div class="title" text-center>
         <span uppercase text-primary text-xl font-700>

@@ -1,16 +1,16 @@
 import { boot } from 'quasar/wrappers';
 import { createI18n } from 'vue-i18n';
-import { TAboutUs } from 'widgets/AboutUs';
-import { TAdvances } from 'widgets/Advances';
-import { THeader } from 'widgets/Header';
-import { THome } from 'widgets/Home';
+import { TAboutUsI18n } from 'widgets/WAboutUs';
+import { TAdvancesI18n } from 'widgets/WAdvances';
+import { THeaderI18n } from 'widgets/WHeader';
+import { THomeI18n } from 'widgets/WHome';
 import { mergeI18n } from 'shared/api/i18utils';
 
 export default boot(({ app }) => {
   const i18n = createI18n({
     locale: 'ru-RU',
     legacy: false,
-    messages: mergeI18n(THeader, THome, TAboutUs, TAdvances),
+    messages: mergeI18n(THeaderI18n, THomeI18n, TAboutUsI18n, TAdvancesI18n),
     fallbackLocale: 'en-US',
   });
 

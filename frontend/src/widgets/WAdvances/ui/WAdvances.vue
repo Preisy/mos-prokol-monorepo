@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { SPrettyHeader } from 'shared/ui/prettyHeader';
-import { SStructure } from 'shared/ui/structure';
-import WAdvanceCard from './WAdvanceCard.vue';
+import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
+import { SStructure } from 'shared/ui/SStructure';
+import AdvanceCard from './AdvanceCard.vue';
 
 const { tm } = useI18n();
 </script>
@@ -12,7 +12,7 @@ const { tm } = useI18n();
     <SStructure my-8>
       <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
       <div flex flex-row justify-between gap-x-6>
-        <WAdvanceCard
+        <AdvanceCard
           max-w-72
           v-for="(card, index) of tm('advances.cards')"
           :key="index"

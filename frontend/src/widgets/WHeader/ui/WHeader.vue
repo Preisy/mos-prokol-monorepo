@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { WLogo } from 'shared/ui/Logo';
-import { SStructure } from 'shared/ui/structure';
-import WHeaderLink from './WHeaderLink.vue';
-import WPhoneNumber from './WPhoneNumber.vue';
+import { SLogo } from 'shared/ui/SLogo';
+import { SStructure } from 'shared/ui/SStructure';
+import HeaderLink from './HeaderLink.vue';
+import PhoneNumber from './PhoneNumber.vue';
 
 const links = [
   'services',
@@ -17,13 +17,13 @@ const links = [
 <template>
   <q-header class="header" bg-unset fixed>
     <SStructure py-5.8 flex flex-row justify-between items-center>
-      <WLogo />
+      <SLogo />
       <div>
-        <WHeaderLink mx-2.8 v-for="link of links" :key="link">
+        <HeaderLink mx-2.8 v-for="link of links" :key="link">
           {{ $t(`header.routes.${link}`) }}
-        </WHeaderLink>
+        </HeaderLink>
       </div>
-      <WPhoneNumber number="89215654388" />
+      <PhoneNumber gray-part="8 (921) " white-part="565 43 88" />
     </SStructure>
     <q-img
       src="./assets/background.svg"
