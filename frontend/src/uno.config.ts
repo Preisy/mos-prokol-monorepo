@@ -12,6 +12,10 @@ export default defineConfig<Theme>({
   presets: [presetUno(), presetAttributify()],
   transformers: [transformerVariantGroup(), transformerDirectives()],
   theme: {
+    fontFamily: {
+      monsterrat: 'Montserrat, sans-serif',
+      inter: 'Inter, sans-serif',
+    },
     colors: {
       unset: 'unset',
       primary: '#FCFCFC',
