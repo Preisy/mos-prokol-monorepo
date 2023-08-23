@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   first?: boolean;
   last?: boolean;
 
@@ -10,6 +10,9 @@ defineProps<{
 defineEmits<{
   (event: 'update:currentIndex', val: number): void;
 }>();
+
+const textId =
+  props.id.toString().length > 1 ? `0${props.id}.` : `${props.id}.`;
 </script>
 
 <template>
@@ -21,14 +24,15 @@ defineEmits<{
     p-r-3.6
     flex
     flex-row
-    justify-between
     class="card"
     :class="{ first, last, active: id === currentIndex }"
     @click="$emit('update:currentIndex', id)"
   >
-    <div class="index" text-xl line-height-none font-700 m-r-8.8>01.</div>
+    <div class="index" text-xl line-height-none font-700 m-r-8.8>
+      {{ textId }}
+    </div>
     <div class="desc" text-md uppercase font-600>
-      Планирование и расчет траектории бурения
+      <slot></slot>
     </div>
   </div>
 </template>

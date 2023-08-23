@@ -5,3 +5,5 @@ export const TStagesI18n = {
   'en-US': eu,
   'ru-RU': ru,
 };
+
+export * from './types';

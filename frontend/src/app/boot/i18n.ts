@@ -5,7 +5,7 @@ import { mergeI18n } from 'shared/api/i18utils';
 
 export default boot(({ app }) => {
   const i18n = createI18n({
-    locale: 'en-US',
+    locale: 'ru-RU',
     legacy: false,
     messages: mergeI18n(TStagesI18n),
   });
