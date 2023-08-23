@@ -1,8 +1,8 @@
 <template>
-  <div class="structure"><slot></slot></div>
+  <div class="s-structure"><slot></slot></div>
 </template>
 <style scoped lang="scss">
-.structure {
+.s-structure {
   width: 80%;
   margin-left: auto;
   margin-right: auto;

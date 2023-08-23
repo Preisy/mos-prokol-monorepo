@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div inline-block uppercase relative>
+  <div inline-block uppercase relative class="s-pretty-header">
     <h1 text-xl font-700 text-white relative z-1><slot></slot></h1>
     <h1
       font-700

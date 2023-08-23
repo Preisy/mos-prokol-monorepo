@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div relative w-fit h-min text-center inline-block>
+  <div relative w-fit h-min text-center inline-block class="s-btn">
     <div
-      class="w-9/10 left-5/100 shadow"
+      class="w-9/10 left-5/100"
       rounded-2
       absolute
       top-1
@@ -11,7 +11,6 @@
       bg-btnShadow
     />
     <q-btn
-      class="btn"
       relative
       z-2
       uppercase
