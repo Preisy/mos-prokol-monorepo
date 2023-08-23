@@ -8,7 +8,7 @@ const { tm } = useI18n();
 </script>
 
 <template>
-  <div class="content-wrapper" bg-black overflow-hidden>
+  <div class="w-advances" bg-black overflow-hidden>
     <SStructure my-8>
       <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
       <div flex flex-row justify-between gap-x-6>

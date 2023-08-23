@@ -3,7 +3,7 @@ import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
 </script>
 <template>
-  <div class="content-wrapper" bg-black overflow-hidden relative>
+  <div class="w-about-us" bg-black overflow-hidden relative>
     <SStructure my-50 relative z-1>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div class="descr w-6/10" text-white>

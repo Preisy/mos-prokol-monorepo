@@ -24,6 +24,7 @@ export default defineConfig<Theme>({
       'attractive-2': '#ffd743', //b2
       btnTextColor: '#574c1f',
       btnShadow: '#e7c02f',
+      shadowing: '#1C1A15',
     },
     fontSize: {
       sm: ['0.7rem', 'normal'],
@@ -48,6 +49,13 @@ export default defineConfig<Theme>({
     [
       'bg-gradient-yellow',
       { background: 'linear-gradient(180deg, #fceb91 0%, #ffd743 100%);' },
+    ],
+    [
+      'bg-gradient-shadow',
+      {
+        background:
+          'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.70) 78.97%)',
+      },
     ],
     [
       /^text-outline-(.+)$/,

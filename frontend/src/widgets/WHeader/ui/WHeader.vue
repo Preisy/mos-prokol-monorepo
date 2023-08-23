@@ -15,7 +15,7 @@ const links = [
 </script>
 
 <template>
-  <q-header class="header" bg-unset fixed>
+  <q-header class="w-header" bg-unset fixed>
     <SStructure py-5.8 flex flex-row justify-between items-center>
       <SLogo />
       <div>
