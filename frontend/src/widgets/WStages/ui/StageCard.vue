@@ -51,7 +51,7 @@ $additive-w: 1rem;
   margin-left: calc(-1 * $additive-w);
   border-top-left-radius: $br-size;
   border-bottom-left-radius: $br-size;
-
+  --uno: border-attractive2 border-l-6 border-0 border-style-solid;
   .index {
     --uno: text-attractive2;
   }

@@ -1,8 +1,7 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import LHome from 'processes/layouts/LHome.vue';
+import { WStages } from 'widgets/WStages';
 </script>
 
 <template>
-  <LHome></LHome>
+  <WStages />
 </template>

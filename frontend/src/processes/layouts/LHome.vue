@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { WStages } from 'widgets/Stages';
+import PHome from 'pages/PHome.vue';
 </script>
 
 <template>
-  <WStages></WStages>
+  <PHome />
 </template>
