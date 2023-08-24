@@ -5,7 +5,7 @@ import { Post, Body } from '@nestjs/common';
 export class MailController {
     constructor(private mailService: MailService) { }
     @Post()
-    sendInfoMessage(@Body() req: JSON) {
+    sendInfoMessage(@Body() req: Object) {
         this.mailService.sendInfoMessage(req);
     }
 }
