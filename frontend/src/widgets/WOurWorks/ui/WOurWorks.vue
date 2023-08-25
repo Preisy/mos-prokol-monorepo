@@ -12,11 +12,11 @@ const slides = chunk(_.concat(_).concat(_), slideSize);
 
 <template>
   <div class="w-our-works" bg-black overflow-hidden>
-    <SStructure m-y-40>
+    <SStructure py-40>
       <SPrettyHeader w-fit block m-x-auto class="header">
         {{ $t('ourWorks.header') }}
       </SPrettyHeader>
-      <SCarousel :length="slides.length">
+      <SCarousel :infinite="true" :length="slides.length">
         <OurWorksSlide
           v-for="(slide, index) in slides"
           :key="index"

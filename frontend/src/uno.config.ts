@@ -16,6 +16,10 @@ export default defineConfig<Theme>({
       primary: '#FCFCFC',
       secondary: '#1A1A1A',
       attractive: '#FCE078',
+      attractive2: '#ffd743',
+      btnTextColor: '#574c1f',
+      btnShadow: '#e7c02f',
+      shadowing: '#1C1A15',
     },
     fontSize: {
       sm: ['0.7rem', 'normal'],
