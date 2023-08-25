@@ -3,8 +3,8 @@ import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
 </script>
 <template>
-  <div class="w-about-us" bg-black overflow-hidden relative>
-    <SStructure my-50 relative z-1>
+  <div class="w-about-us" bg-black overflow-hidden relative mt--16>
+    <SStructure py-40 relative z-1>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div w="6/10" text-white>
         <div mb-6>
@@ -22,7 +22,7 @@ import { SStructure } from 'shared/ui/SStructure';
       z-0
       brightness-50
       right--80
-      top="15/100"
+      top--8
       rounded="5/10"
     />
   </div>

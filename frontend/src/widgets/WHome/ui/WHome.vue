@@ -8,7 +8,7 @@ const { tm } = useI18n();
 </script>
 
 <template>
-  <div class="w-home" overflow-hidden relative>
+  <div class="w-home" overflow-hidden relative z-1>
     <SStructure my-70>
       <div flex flex-row justify-end>
         <HomeChip v-for="card in tm('home.cards')" :key="card">
@@ -28,22 +28,10 @@ const { tm } = useI18n();
     <img
       src="/widgets/WHome/background.png"
       absolute
-      w-auto
-      h-auto
-      left--50
       top-0
       z--1
-    />
-    <div
-      w-full
+      w-auto
       h-full
-      left-0
-      z--1
-      absolute
-      blur-100
-      top="2/10"
-      bg="shadowing/60"
-      rounded="1/1"
     />
   </div>
 </template>
