@@ -8,7 +8,6 @@ const slide = ref('0');
 const click = (delta: number) => {
   slide.value =
     ((props.length + parseInt(slide.value) + delta) % props.length) + '';
-  console.log(slide.value);
 };
 </script>
 

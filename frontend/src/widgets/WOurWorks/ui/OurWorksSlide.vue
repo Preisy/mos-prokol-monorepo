@@ -1,16 +1,20 @@
 <script setup lang="ts">
 defineProps<{
   name: string;
-  imgSrc: string[3];
+  imgSrc: string[];
 }>();
 </script>
 
 <template>
   <q-carousel-slide :name="name">
-    <div grid grid-cols-3 grid-rows-2>
-      <q-img :src="imgSrc[0]" row-span-2 col-span-2 />
-      <q-img :src="imgSrc[1]" />
-      <q-img :src="imgSrc[2]" />
+    <div grid grid-cols-3 grid-rows-2 gap-5>
+      <q-img
+        v-for="(src, index) in imgSrc"
+        :key="src"
+        :src="src"
+        :class="{ 'row-span-2 col-span-2': index === 0 }"
+        rounded-2.4
+      />
     </div>
   </q-carousel-slide>
 </template>
