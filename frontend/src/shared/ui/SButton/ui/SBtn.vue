@@ -1,9 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { QBtnProps } from 'quasar';
+
+interface SBtnProps extends QBtnProps {}
+defineProps<SBtnProps>();
+</script>
 
 <template>
   <div relative w-fit h-min text-center inline-block class="s-btn">
     <div w="9/10" left="5/100" rounded-2 absolute top-1 h-full bg-btnShadow />
     <q-btn
+      v-bind="{ ...$attrs, ...$props }"
       relative
       z-2
       uppercase
