@@ -10,17 +10,17 @@ const { tm } = useI18n();
 <template>
   <div class="w-home" overflow-hidden relative>
     <SStructure my-70>
-      <div class="advances" flex flex-row justify-end>
+      <div flex flex-row justify-end>
         <HomeChip v-for="card in tm('home.cards')" :key="card">
           {{ card }}
         </HomeChip>
       </div>
-      <div class="title" text-center>
+      <div text-center>
         <span uppercase text-primary text-xl font-700>
           {{ $t('home.title') }}
         </span>
       </div>
-      <div class="button" text-center mt-4>
+      <div text-center mt-4>
         <SBtn>{{ $t('home.btn') }}</SBtn>
       </div>
     </SStructure>
@@ -41,7 +41,9 @@ const { tm } = useI18n();
       z--1
       absolute
       blur-100
-      class="top-2/10 bg-shadowing/60 rounded-1/1"
+      top="2/10"
+      bg="shadowing/60"
+      rounded="1/1"
     />
   </div>
 </template>

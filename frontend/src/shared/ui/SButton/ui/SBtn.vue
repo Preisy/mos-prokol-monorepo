@@ -2,14 +2,7 @@
 
 <template>
   <div relative w-fit h-min text-center inline-block class="s-btn">
-    <div
-      class="w-9/10 left-5/100"
-      rounded-2
-      absolute
-      top-1
-      h-full
-      bg-btnShadow
-    />
+    <div w="9/10" left="5/100" rounded-2 absolute top-1 h-full bg-btnShadow />
     <q-btn
       relative
       z-2
