@@ -9,7 +9,7 @@ const { tm } = useI18n();
 
 <template>
   <div class="w-advances" bg-black overflow-hidden>
-    <SStructure my-8>
+    <SStructure py-8>
       <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
       <div flex flex-row justify-between gap-x-6>
         <AdvanceCard

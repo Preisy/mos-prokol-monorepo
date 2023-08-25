@@ -9,7 +9,7 @@ const { tm } = useI18n();
 
 <template>
   <div class="w-home" overflow-hidden relative z-1>
-    <SStructure my-70>
+    <SStructure py-70>
       <div flex flex-row justify-end>
         <HomeChip v-for="card in tm('home.cards')" :key="card">
           {{ card }}
