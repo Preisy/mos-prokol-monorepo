@@ -19,11 +19,22 @@ defineProps<SBtnProps>();
       leading-none
       px-16
       py-4
-      rounded-2
-      bg-gradient-yellow
+      rounded-1.6
       text-btn-text-color
+      overflow-hidden
+      class="after"
     >
       <slot></slot>
     </q-btn>
   </div>
 </template>
+
+<style scoped lang="scss">
+.after {
+  ::after {
+    content: '';
+    --uno: absolute bg-gradient-yellow top-5/10 left-0 translate-y--5/10
+      rounded-5/10 w-full h-5/1 z--1;
+  }
+}
+</style>
