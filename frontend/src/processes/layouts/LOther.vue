@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import POther from 'pages/POther.vue';
+</script>
 
 <template>
-  <div>Error path</div>
+  <POther></POther>
 </template>

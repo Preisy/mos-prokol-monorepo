@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PHome from 'pages/PHome.vue';
+</script>
 
 <template>
-  <div bg-amber text-emerald p-10>HelloHome!</div>
+  <PHome></PHome>
 </template>

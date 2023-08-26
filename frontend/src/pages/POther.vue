@@ -1,7 +1,5 @@
-<script setup lang="ts">
-import LOther from 'processes/layouts/LOther.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <LOther></LOther>
+  <div>Other</div>
 </template>
