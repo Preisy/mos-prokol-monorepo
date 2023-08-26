@@ -32,9 +32,9 @@ const { tm } = useI18n();
 
 <style scoped lang="scss">
 .w-about-us:deep(strong) {
-  --uno: text-attractive-2;
+  --uno: text-attractive2;
 }
 .w-about-us:deep(li::marker) {
-  --uno: text-attractive-2;
+  --uno: text-attractive2;
 }
 </style>

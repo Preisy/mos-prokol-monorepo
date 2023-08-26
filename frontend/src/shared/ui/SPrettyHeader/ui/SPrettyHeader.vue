@@ -12,7 +12,7 @@
       left-4
       top--4
       whitespace-nowrap
-      text-outline-attractive-2
+      text-outline-attractive2
     >
       <slot></slot>
     </h1>

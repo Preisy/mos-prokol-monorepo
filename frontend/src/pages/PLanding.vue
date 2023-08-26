@@ -3,11 +3,13 @@ import { WAboutUs } from 'widgets/WAboutUs';
 import { WAdvances } from 'widgets/WAdvances';
 import { WHeader } from 'widgets/WHeader';
 import { WHome } from 'widgets/WHome';
+import { WOurServices } from 'widgets/WOurServices';
 </script>
 
 <template>
   <WHeader></WHeader>
   <WHome />
   <WAboutUs></WAboutUs>
+  <WOurServices />
   <WAdvances></WAdvances>
 </template>
