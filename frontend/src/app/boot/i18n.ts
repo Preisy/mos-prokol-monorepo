@@ -7,6 +7,7 @@ import { THomeI18n } from 'widgets/WHome';
 import { TOurServices } from 'widgets/WOurServices';
 import { TOurWorksI18n } from 'widgets/WOurWorks';
 import { TPriceI18n } from 'widgets/WPrice/i18n';
+import { TStagesI18n } from 'widgets/WStages';
 import { mergeI18n } from 'shared/api/i18utils';
 
 export default boot(({ app }) => {
@@ -20,7 +21,8 @@ export default boot(({ app }) => {
       TAdvancesI18n,
       TOurServices,
       TPriceI18n,
-      TOurWorksI18n
+      TOurWorksI18n,
+      TStagesI18n
     ),
     fallbackLocale: 'ru-RU',
   });

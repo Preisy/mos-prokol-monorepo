@@ -6,6 +6,7 @@ import { WHome } from 'widgets/WHome';
 import { WOurServices } from 'widgets/WOurServices';
 import { WOurWorks } from 'widgets/WOurWorks';
 import { WPrice } from 'widgets/WPrice';
+import { WStages } from 'widgets/WStages';
 </script>
 
 <template>
@@ -16,4 +17,5 @@ import { WPrice } from 'widgets/WPrice';
   <WPrice></WPrice>
   <WAdvances></WAdvances>
   <WOurWorks></WOurWorks>
+  <WStages />
 </template>
