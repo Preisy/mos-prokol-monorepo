@@ -1,27 +1,28 @@
 <script setup lang="ts">
+import { QCarousel, QCarouselProps } from 'quasar';
 import { ref } from 'vue';
 
-const props = defineProps<{
+interface SCarouselProps extends QCarouselProps {
   length: number;
-}>();
+}
+
+defineProps<SCarouselProps>();
 const slide = ref('0');
-const click = (delta: number) => {
-  slide.value =
-    ((props.length + parseInt(slide.value) + delta) % props.length) + '';
-  console.log(slide.value);
-};
+const carousel = ref<InstanceType<typeof QCarousel>>();
 </script>
 
 <template>
   <div relative>
     <q-carousel
+      v-bind="{ ...$props, ...$attrs }"
       v-model="slide"
-      class="w-9/10"
-      m-x-auto
-      h-auto
+      ref="carousel"
       transition-prev="slide-right"
       transition-next="slide-left"
       animated
+      w="9/10"
+      mx-auto
+      h-auto
       bg-unset
     >
       <slot></slot>
@@ -43,7 +44,7 @@ const click = (delta: number) => {
         round
         :ripple="false"
         padding="none"
-        @click="click(1)"
+        @click="carousel?.previous()"
       >
         <q-icon name="chevron_left" />
       </q-btn>
@@ -52,7 +53,7 @@ const click = (delta: number) => {
         round
         :ripple="false"
         padding="none"
-        @click="click(-1)"
+        @click="carousel?.next()"
       >
         <q-icon name="chevron_right" />
       </q-btn>

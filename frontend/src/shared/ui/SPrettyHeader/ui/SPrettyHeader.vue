@@ -11,6 +11,7 @@
       absolute
       left-4
       top--4
+      select-none
       whitespace-nowrap
       text-outline-attractive2
       class="secondary"
