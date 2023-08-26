@@ -61,9 +61,11 @@ export default defineConfig<Theme>({
       /^text-outline-(.+)$/,
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       ([_, color], { theme, rawSelector }) => {
+        const shadowColor = theme.colors?.[color] ?? color;
+
         return `
         ${toEscapedSelector(rawSelector)} {
-          --shadow-color: ${theme.colors?.[color]};
+          --shadow-color: ${shadowColor};
           text-shadow: -1px -1px 0 var(--shadow-color), 0 -1px 0 var(--shadow-color),
           1px -1px 0 var(--shadow-color), 1px 0 0 var(--shadow-color),
           1px 1px 0 var(--shadow-color), 0 1px 0 var(--shadow-color),

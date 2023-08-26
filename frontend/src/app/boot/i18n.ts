@@ -5,6 +5,7 @@ import { TAdvancesI18n } from 'widgets/WAdvances';
 import { THeaderI18n } from 'widgets/WHeader';
 import { THomeI18n } from 'widgets/WHome';
 import { TOurServices } from 'widgets/WOurServices';
+import { TPriceI18n } from 'widgets/WPrice/i18n';
 import { mergeI18n } from 'shared/api/i18utils';
 
 export default boot(({ app }) => {
@@ -16,7 +17,8 @@ export default boot(({ app }) => {
       THomeI18n,
       TAboutUsI18n,
       TAdvancesI18n,
-      TOurServices
+      TOurServices,
+      TPriceI18n
     ),
     fallbackLocale: 'ru-RU',
   });

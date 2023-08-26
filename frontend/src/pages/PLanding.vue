@@ -4,6 +4,7 @@ import { WAdvances } from 'widgets/WAdvances';
 import { WHeader } from 'widgets/WHeader';
 import { WHome } from 'widgets/WHome';
 import { WOurServices } from 'widgets/WOurServices';
+import { WPrice } from 'widgets/WPrice';
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import { WOurServices } from 'widgets/WOurServices';
   <WHome />
   <WAboutUs></WAboutUs>
   <WOurServices />
+  <WPrice></WPrice>
   <WAdvances></WAdvances>
 </template>
