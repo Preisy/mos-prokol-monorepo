@@ -21,7 +21,7 @@ const rows: PriceRow[] = [
       {{ $t('price.spreadsheet.header') }}
     </SPrettyHeader>
     <table text-4.8 text-center w-min border-collapse uppercase>
-      <tr bg="attractive2/20" font-600 whitespace-nowrap>
+      <tr bg="attractive2/10" font-600 whitespace-nowrap>
         <td class="border-(l-0! t-0!)">
           {{ $t('price.spreadsheet.firstRow.diameter') }}
         </td>
