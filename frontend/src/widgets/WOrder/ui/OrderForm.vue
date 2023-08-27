@@ -36,7 +36,7 @@ const onSubmit = handleSubmit((values) => {
         <FormInput
           v-model="telephone"
           name="telephone"
-          title="Телефон"
+          :title="$t('order.fields.telephone')"
           mask="# (###) ###-##-##"
         />
       </div>
@@ -44,7 +44,7 @@ const onSubmit = handleSubmit((values) => {
         <FormInput
           v-model="question"
           name="question"
-          title="Ваш вопрос"
+          :title="$t('order.fields.question')"
           type="textarea"
           autocomplete="on"
           resize="none!"
