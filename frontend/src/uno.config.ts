@@ -20,6 +20,8 @@ export default defineConfig<Theme>({
       unset: 'unset',
       primary: '#FCFCFC',
       secondary: '#1A1A1A',
+      secondary2: '#3A3A3A',
+      secondary3: '#C9C9C9',
       attractive: '#FCE078',
       attractive2: '#ffd743',
       btnTextColor: '#574c1f',
