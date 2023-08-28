@@ -7,6 +7,7 @@ import { WOurServices } from 'widgets/WOurServices';
 import { WOurWorks } from 'widgets/WOurWorks';
 import { WPrice } from 'widgets/WPrice';
 import { WStages } from 'widgets/WStages';
+import { WStats } from 'widgets/WStats';
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import { WStages } from 'widgets/WStages';
   <WPrice></WPrice>
   <WAdvances></WAdvances>
   <WOurWorks></WOurWorks>
+  <WStats />
   <WStages />
 </template>
