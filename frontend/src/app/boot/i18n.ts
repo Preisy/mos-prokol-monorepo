@@ -2,6 +2,7 @@ import { boot } from 'quasar/wrappers';
 import { createI18n } from 'vue-i18n';
 import { TAboutUsI18n } from 'widgets/WAboutUs';
 import { TAdvancesI18n } from 'widgets/WAdvances';
+import { TFooterI18n } from 'widgets/WFooter';
 import { THeaderI18n } from 'widgets/WHeader';
 import { THomeI18n } from 'widgets/WHome';
 import { TOurServices } from 'widgets/WOurServices';
@@ -22,7 +23,8 @@ export default boot(({ app }) => {
       TOurServices,
       TPriceI18n,
       TOurWorksI18n,
-      TStagesI18n
+      TStagesI18n,
+      TFooterI18n
     ),
     fallbackLocale: 'ru-RU',
   });
