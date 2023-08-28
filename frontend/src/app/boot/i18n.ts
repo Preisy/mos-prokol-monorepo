@@ -11,7 +11,7 @@ export default boot(({ app }) => {
     locale: 'ru-RU',
     legacy: false,
     messages: mergeI18n(THeaderI18n, THomeI18n, TAboutUsI18n, TAdvancesI18n),
-    fallbackLocale: 'en-US',
+    fallbackLocale: 'ru-RU',
   });
 
   // Set i18n instance on app
