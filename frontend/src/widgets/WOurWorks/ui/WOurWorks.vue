@@ -6,8 +6,13 @@ import { SStructure } from 'shared/ui/SStructure';
 import OurWorksSlide from './OurWorksSlide.vue';
 
 const slideSize = 3;
-const _ = [...Array(3).keys()].map((el) => `widgets/WOurWorks/${el}.png`);
-const slides = chunk(_.concat(_).concat(_), slideSize);
+const slidesImages = [...Array(3).keys()].map(
+  (serialNumber) => `widgets/WOurWorks/${serialNumber}.png`
+);
+const slides = chunk(
+  slidesImages.concat(slidesImages).concat(slidesImages),
+  slideSize
+);
 </script>
 
 <template>
@@ -22,7 +27,7 @@ const slides = chunk(_.concat(_).concat(_), slideSize);
           :key="index"
           :name="index.toString()"
           :img-src="slide"
-        ></OurWorksSlide>
+        />
       </SCarousel>
     </SStructure>
   </div>
