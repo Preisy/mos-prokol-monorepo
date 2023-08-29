@@ -1,30 +1,22 @@
-<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { SCarousel } from 'shared/ui/SCarousel';
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
-import WServiceSlide from './ServiceSlide.vue';
-import WServiceSlideCard, {
-  WServiceSlideCardProps,
-} from './ServiceSlideCard.vue';
+import ServiceSlide from './ServiceSlide.vue';
+import ServiceSlideCard from './ServiceSlideCard.vue';
 
 const { tm } = useI18n();
 
 const buildSlides = (slidesTextes: string[][]) =>
-  slidesTextes.map((slide: string[], slideIndex) => {
-    const res: WServiceSlideCardProps[] = [];
-    slide.forEach((cardText, cardIndex) =>
-      res.push({
-        text: cardText,
-        imgSrc: `/widgets/WOurServices/${cardIndex}.png`,
-      })
-    );
-    return res;
-  });
+  slidesTextes.map((slide: string[]) =>
+    slide.map((cardText, cardIndex) => ({
+      text: cardText,
+      imgSrc: `/widgets/WOurServices/${cardIndex}.png`,
+    }))
+  );
 
 const slides = buildSlides(tm('services.slides'));
-console.log(slides);
 </script>
 <template>
   <div class="content-wrapper" bg-black overflow-hidden>
@@ -33,17 +25,17 @@ console.log(slides);
         {{ $t('services.header') }}
       </SPrettyHeader>
       <SCarousel :length="slides.length">
-        <WServiceSlide
+        <ServiceSlide
           v-for="(slide, index) in slides"
           :key="index"
           :name="index.toString()"
         >
-          <WServiceSlideCard
+          <ServiceSlideCard
             v-for="(card, cardIndex) in slide"
             :key="cardIndex"
             v-bind="card"
           />
-        </WServiceSlide>
+        </ServiceSlide>
       </SCarousel>
     </SStructure>
   </div>
