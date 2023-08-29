@@ -4,6 +4,7 @@ import { TAboutUsI18n } from 'widgets/WAboutUs';
 import { TAdvancesI18n } from 'widgets/WAdvances';
 import { THeaderI18n } from 'widgets/WHeader';
 import { THomeI18n } from 'widgets/WHome';
+import { TOrderI18n } from 'widgets/WOrder';
 import { TOurServices } from 'widgets/WOurServices';
 import { TOurWorksI18n } from 'widgets/WOurWorks';
 import { TPriceI18n } from 'widgets/WPrice/i18n';
@@ -19,6 +20,7 @@ export default boot(({ app }) => {
       THomeI18n,
       TAboutUsI18n,
       TAdvancesI18n,
+      TOrderI18n,
       TOurServices,
       TPriceI18n,
       TOurWorksI18n,
