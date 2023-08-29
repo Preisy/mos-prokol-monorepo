@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { WAboutUs } from 'widgets/WAboutUs';
 import { WAdvances } from 'widgets/WAdvances';
+import { WFooter } from 'widgets/WFooter';
 import { WHeader } from 'widgets/WHeader';
 import { WHome } from 'widgets/WHome';
 import { WOrder } from 'widgets/WOrder';
@@ -22,4 +23,5 @@ import { WStats } from 'widgets/WStats';
   <WOurWorks></WOurWorks>
   <WStats />
   <WStages />
+  <WFooter />
 </template>

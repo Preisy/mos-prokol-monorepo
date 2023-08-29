@@ -19,6 +19,7 @@ export default defineConfig<Theme>({
     colors: {
       unset: 'unset',
       primary: '#FCFCFC',
+      primary3: '#c6c6c6',
       secondary: '#1A1A1A',
       secondary2: '#3A3A3A',
       secondary3: '#C9C9C9',
