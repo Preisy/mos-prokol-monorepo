@@ -1,0 +1,29 @@
+<script setup lang="ts">
+import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
+import { SStructure } from 'shared/ui/SStructure';
+</script>
+<template>
+  <div class="w-about-us" bg-black overflow-hidden relative mt--16>
+    <SStructure py-40 relative z-1>
+      <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
+      <div w="6/10" text-white>
+        <div mb-6>
+          {{ $t('about.desc.0') }}
+        </div>
+        <div>
+          {{ $t('about.desc.1') }}
+        </div>
+      </div>
+    </SStructure>
+    <img
+      src="/widgets/WAboutUs/background.png"
+      absolute
+      w-280
+      z-0
+      brightness-50
+      right--80
+      top--8
+      rounded="5/10"
+    />
+  </div>
+</template>

@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PLanding from 'pages/PLanding.vue';
+</script>
 
 <template>
-  <div bg-amber text-emerald p-10>HelloHome!</div>
+  <q-layout view="hHh lpr fFf">
+    <PLanding></PLanding>
+  </q-layout>
 </template>
