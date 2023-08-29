@@ -18,7 +18,12 @@ import FooterLinks from './FooterLinks.vue';
           </div>
 
           <div mb-5>
-            <SBtn text="11px!" class="btn">{{ $t('footer.btn') }}</SBtn>
+            <SBtn
+              text="11px! neutral-6!"
+              class="[&>.s-btn\_shadow]:bg-neutral-5! [&>.s-btn\_wrapper>.s-btn\_background]:bg-neutral"
+            >
+              {{ $t('footer.btn') }}
+            </SBtn>
           </div>
 
           <SPhoneNumber
@@ -59,17 +64,3 @@ import FooterLinks from './FooterLinks.vue';
     />
   </div>
 </template>
-
-<style scoped lang="scss">
-.btn {
-  &:deep(.s-btn_background) {
-    background: #a1a1a1;
-  }
-  &:deep(.s-btn_btn) {
-    color: #575757;
-  }
-  &:deep(.s-btn_shadow) {
-    background: #777;
-  }
-}
-</style>

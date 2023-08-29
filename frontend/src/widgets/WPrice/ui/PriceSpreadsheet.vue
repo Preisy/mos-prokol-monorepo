@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
+import PriceCell from './PriceCell.vue';
 
 interface PriceRow {
   diameter: number;
@@ -17,47 +18,36 @@ const rows: PriceRow[] = [
 
 <template>
   <div bg-primary flex flex-col py-8 px-16 box-border w-min rounded-3.6 mx-auto>
-    <SPrettyHeader class="pretty-header" mx-auto block>
+    <SPrettyHeader
+      class="[&>.main]:(text-12 text-black) [&>.secondary]:(left-4 top--8 text-white)"
+      mx-auto
+      block
+    >
       {{ $t('price.spreadsheet.header') }}
     </SPrettyHeader>
     <table text-4.8 text-center w-min border-collapse uppercase>
       <tr bg="attractive2/10" font-600 whitespace-nowrap>
-        <td class="border-(l-0! t-0!)">
+        <PriceCell class="border-(l-0! t-0!)">
           {{ $t('price.spreadsheet.firstRow.diameter') }}
-        </td>
-        <td class="border-(r-0! t-0!)">
+        </PriceCell>
+        <PriceCell class="border-(r-0! t-0!)">
           {{ $t('price.spreadsheet.firstRow.price') }}
-        </td>
+        </PriceCell>
       </tr>
       <tr v-for="(row, index) in rows" :key="index" font-500>
-        <td
+        <PriceCell
           class="border-l-0!"
           :class="{ 'border-b-0!': index === rows.length - 1 }"
         >
           {{ row.diameter }}
-        </td>
-        <td
+        </PriceCell>
+        <PriceCell
           class="border-r-0!"
           :class="{ 'border-b-0!': index === rows.length - 1 }"
         >
           {{ $t('price.spreadsheet.pretext') }} {{ row.price }}
-        </td>
+        </PriceCell>
       </tr>
     </table>
   </div>
 </template>
-
-<style scoped lang="scss">
-.pretty-header {
-  &:deep(.main) {
-    --uno: text-12 text-black;
-  }
-
-  &:deep(.secondary) {
-    --uno: text-white left-4 top--8;
-  }
-}
-td {
-  --uno: p-1 border-1 border-attractive2 border-solid;
-}
-</style>

@@ -20,6 +20,7 @@ export default defineConfig<Theme>({
       unset: 'unset',
       primary: '#FCFCFC',
       primary3: '#c6c6c6',
+      primary4: '#efeeea',
       secondary: '#1A1A1A',
       secondary2: '#3A3A3A',
       secondary3: '#C9C9C9',
@@ -73,16 +74,23 @@ export default defineConfig<Theme>({
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       ([_, color], { theme, rawSelector }) => {
         const shadowColor = theme.colors?.[color] ?? color;
+        const isImportant = (rawSelector as string).endsWith('!');
 
         return `
         ${toEscapedSelector(rawSelector)} {
-          --shadow-color: ${shadowColor};
+          --shadow-color: ${shadowColor} ${isImportant ? '!important' : ''};
           text-shadow: -1px -1px 0 var(--shadow-color), 0 -1px 0 var(--shadow-color),
           1px -1px 0 var(--shadow-color), 1px 0 0 var(--shadow-color),
           1px 1px 0 var(--shadow-color), 0 1px 0 var(--shadow-color),
           -1px 1px 0 var(--shadow-color), -1px 0 0 var(--shadow-color);
         }`;
       },
+    ],
+    [
+      /^set-shadow-color-(.+)$/,
+      ([, color], { theme }) => ({
+        '--shadow-color': (theme.colors?.[color] ?? color) as string,
+      }),
     ],
   ],
 });

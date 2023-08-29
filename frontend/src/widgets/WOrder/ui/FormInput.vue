@@ -12,10 +12,7 @@ defineProps<FormInputProps>();
   <div text-base font-600>
     <div text-secondary3 mb-1>{{ title }}</div>
 
-    <!--  border-solid
-      border-x-0
-      border-secondary3 -->
-    <div relative overflow-hidden rounded-0 class="input-wrapper">
+    <div relative overflow-hidden rounded-0 class="[&>.q-field]:p-0">
       <q-input
         v-bind="{ ...$attrs, ...$props }"
         borderless
@@ -43,9 +40,3 @@ defineProps<FormInputProps>();
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-.input-wrapper:deep(.q-field) {
-  padding: 0;
-}
-</style>

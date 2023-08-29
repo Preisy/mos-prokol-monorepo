@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { QCarousel, QCarouselProps } from 'quasar';
 import { ref } from 'vue';
+import CarouselControlBtn from './CarouselControlBtn.vue';
 
 interface SCarouselProps extends QCarouselProps {
   length: number;
@@ -38,42 +39,14 @@ const carousel = ref<InstanceType<typeof QCarousel>>();
       text-attractive2
       text-base
       absolute
+      translate-y="-5/10"
     >
-      <q-btn
-        class="left btn"
-        round
-        :ripple="false"
-        padding="none"
-        @click="carousel?.previous()"
-      >
+      <CarouselControlBtn @click="carousel?.previous()">
         <q-icon name="chevron_left" />
-      </q-btn>
-      <q-btn
-        class="right btn"
-        round
-        :ripple="false"
-        padding="none"
-        @click="carousel?.next()"
-      >
+      </CarouselControlBtn>
+      <CarouselControlBtn @click="carousel?.next()">
         <q-icon name="chevron_right" />
-      </q-btn>
+      </CarouselControlBtn>
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-.controls {
-  transform: translateY(-50%);
-}
-.btn {
-  --at-apply: 'w-9.6 h-9.6';
-  transition: 0.3s;
-
-  &:deep(.q-focus-helper) {
-    display: none;
-  }
-  &:hover {
-    scale: 1.1;
-  }
-}
-</style>

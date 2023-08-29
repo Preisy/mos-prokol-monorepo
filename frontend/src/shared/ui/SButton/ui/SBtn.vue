@@ -16,13 +16,19 @@ defineProps<SBtnProps>();
       top-1
       h-full
       bg-btnShadow
-      z--1
+      z-0
     />
-    <div overflow-hidden w-full h-full relative rounded-1.6>
+    <div
+      class="s-btn_wrapper"
+      overflow-hidden
+      w-full
+      h-full
+      relative
+      rounded-1.6
+    >
       <div
         class="s-btn_background"
         absolute
-        bg-gradient-yellow
         top="5/10"
         left-0
         translate-y="-5/10"
@@ -30,6 +36,7 @@ defineProps<SBtnProps>();
         w-full
         h="5/1"
         z-0
+        bg-gradient-yellow
       />
       <q-btn
         v-bind="{ ...$attrs, ...$props }"

@@ -11,7 +11,10 @@ const { tm } = useI18n();
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div w="6/10" text-white font-600>
         <div v-for="(line, lineIndex) of tm('about.desc')" :key="lineIndex">
-          <span v-html="line"></span>
+          <span
+            v-html="line"
+            class="[&>strong]:text-attractive2 [&>li::marker]:text-attractive2"
+          ></span>
         </div>
       </div>
     </SStructure>
@@ -29,12 +32,3 @@ const { tm } = useI18n();
     />
   </div>
 </template>
-
-<style scoped lang="scss">
-.w-about-us:deep(strong) {
-  --uno: text-attractive2;
-}
-.w-about-us:deep(li::marker) {
-  --uno: text-attractive2;
-}
-</style>

@@ -26,7 +26,12 @@ const lines = tm('stats.lines') as StatLineProps[];
         </template>
       </div>
       <div>
-        <SPrettyHeader class="header">{{ $t('stats.header') }}</SPrettyHeader>
+        <SPrettyHeader
+          set-shadow-color-secondary4
+          class="[&>.main]:text-secondary4 [&>.secondary]:(text-primary4 set-shadow-color-secondary4)"
+        >
+          {{ $t('stats.header') }}
+        </SPrettyHeader>
       </div>
     </SStructure>
     <img
@@ -40,15 +45,3 @@ const lines = tm('stats.lines') as StatLineProps[];
     />
   </div>
 </template>
-
-<style scoped lang="scss">
-.header {
-  &:deep(.main) {
-    --uno: text-secondary4;
-  }
-  &:deep(.secondary) {
-    color: rgb(239, 238, 234);
-    --shadow-color: #313131;
-  }
-}
-</style>
