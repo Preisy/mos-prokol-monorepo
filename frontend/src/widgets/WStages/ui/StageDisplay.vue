@@ -4,7 +4,7 @@ import DisplayCard from './DisplayCard.vue';
 const props = defineProps<{
   id: number;
 }>();
-const imgUrl = computed(() => `/stages/${props.id}.png`);
+const imgUrl = computed(() => `widgets/WStages/${props.id}.png`);
 </script>
 
 <template>
