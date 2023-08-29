@@ -7,5 +7,10 @@ export default {
       telephone: 'Telephone',
       question: 'Your question',
     },
+    errors: {
+      telephoneRegexp: 'Wrong number',
+      questionShort: 'Not enough',
+      questionLong: 'Text overflow',
+    },
   },
 };

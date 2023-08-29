@@ -1,17 +1,23 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
 import { Form, useField, useForm } from 'vee-validate';
+import { useI18n } from 'vue-i18n';
 import { z } from 'zod';
 import { SBtn } from 'shared/ui/SButton';
 import FormInput from './FormInput.vue';
+
+const { t } = useI18n();
 
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
 const validationSchema = toTypedSchema(
   z.object({
-    telephone: z.string().regex(phoneRegex, 'Неверный номер'),
-    question: z.string().min(20, 'Слишком мало').max(2000, 'Слишком много'),
+    telephone: z.string().regex(phoneRegex, t('order.errors.telephoneRegexp')),
+    question: z
+      .string()
+      .min(20, t('order.errors.questionShort'))
+      .max(2000, t('order.errors.questionLong')),
   })
 );
 
