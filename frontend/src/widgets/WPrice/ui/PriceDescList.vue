@@ -1,10 +1,8 @@
 <script setup lang="ts">
-// import chunk from 'lodash.chunk';
 import { useI18n } from 'vue-i18n';
 
 const { tm } = useI18n();
 const points = tm('price.list.points');
-// const chunks = chunk(tm('price.list.points'), 2);
 </script>
 
 <template>

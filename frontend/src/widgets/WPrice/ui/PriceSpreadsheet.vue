@@ -2,12 +2,10 @@
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import PriceCell from './PriceCell.vue';
 
-interface PriceRow {
+const rows: {
   diameter: number;
   price: number;
-}
-
-const rows: PriceRow[] = [
+}[] = [
   { diameter: 32, price: 1100 },
   { diameter: 63, price: 1350 },
   { diameter: 110, price: 1500 },
