@@ -1,6 +1,5 @@
 <template>
-  <!--TODO: real logo-->
-  <div px-12 py-3 bg-gray-7 rounded-10 w-min inline-block class="s-logo">
-    LOGO
+  <div w-24 rounded-10 inline-block class="s-logo">
+    <q-img src="/shared/SLogo/logo.svg" w-full h-full />
   </div>
 </template>
