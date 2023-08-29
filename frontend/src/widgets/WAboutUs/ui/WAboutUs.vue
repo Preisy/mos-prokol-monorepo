@@ -11,10 +11,10 @@ const { tm } = useI18n();
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
       <div w="6/10" text-white font-600>
         <div v-for="(line, lineIndex) of tm('about.desc')" :key="lineIndex">
-          <span
+          <p
             v-html="line"
             class="[&>strong]:text-attractive2 [&>li::marker]:text-attractive2"
-          ></span>
+          ></p>
         </div>
       </div>
     </SStructure>
