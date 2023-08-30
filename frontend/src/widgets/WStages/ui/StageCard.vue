@@ -24,8 +24,14 @@ const textId =
     p-r-3.6
     flex
     flex-row
+    w-27rem
     class="card"
-    :class="{ first, last, active: id === currentIndex }"
+    :class="{
+      'rounded-tl-0.6rem': first,
+      'rounded-bl-0.6rem': last,
+      'w-28rem ml--1rem rounded-l-0.6rem border-attractive2 border-l-6 border-0 border-solid [&>.index]:text-attractive2 [&>.desc]:text-black':
+        id === currentIndex,
+    }"
     @click="$emit('update:currentIndex', id)"
   >
     <div class="index" text-xl line-height-none font-700 m-r-8.8>
@@ -36,31 +42,3 @@ const textId =
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-$br-size: 0.6rem;
-$default-w: 27rem;
-$additive-w: 1rem;
-.card {
-  width: $default-w;
-}
-.first {
-  border-top-left-radius: $br-size;
-}
-.last {
-  border-bottom-left-radius: $br-size;
-}
-.active {
-  width: calc($additive-w + $default-w);
-  margin-left: calc(-1 * $additive-w);
-  border-top-left-radius: $br-size;
-  border-bottom-left-radius: $br-size;
-  --uno: border-attractive2 border-l-6 border-0 border-style-solid;
-  .index {
-    --uno: text-attractive2;
-  }
-  .desc {
-    color: black;
-  }
-}
-</style>
