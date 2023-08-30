@@ -44,6 +44,8 @@ export default defineConfig<Theme>({
       sm: '450px',
       md: '900px',
       xl: '1280px',
+      '2xl': '1440px',
+      '3xl': '1600px',
     },
   },
   preflights: [],

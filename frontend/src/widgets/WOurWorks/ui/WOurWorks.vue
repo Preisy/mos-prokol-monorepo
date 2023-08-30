@@ -18,9 +18,11 @@ const slides = chunk(
 <template>
   <div class="w-our-works" bg-black overflow-hidden>
     <SStructure py-40>
-      <SPrettyHeader w-fit block m-x-auto class="header">
-        {{ $t('ourWorks.header') }}
-      </SPrettyHeader>
+      <div text-center>
+        <SPrettyHeader w-fit block class="header">
+          {{ $t('ourWorks.header') }}
+        </SPrettyHeader>
+      </div>
       <SCarousel :infinite="true" :length="slides.length">
         <OurWorksSlide
           v-for="(slide, index) in slides"

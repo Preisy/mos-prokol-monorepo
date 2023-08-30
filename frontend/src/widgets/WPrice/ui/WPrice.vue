@@ -6,7 +6,7 @@ import PriceSpreadsheet from './PriceSpreadsheet.vue';
 
 <template>
   <div class="w-price" bg-black overflow-hidden relative>
-    <SStructure py-30 w-min>
+    <SStructure py-30 w-min relative>
       <PriceSpreadsheet></PriceSpreadsheet>
       <div text-primary font-600 text-base mx-4 mt-7>
         <p>{{ $t('price.description') }}</p>

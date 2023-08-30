@@ -28,6 +28,7 @@ defineProps<FormInputProps>();
         h="5/1"
         rounded="1/1"
         border-y-0
+        border-x-2
         border-secondary3
         border-solid
         absolute

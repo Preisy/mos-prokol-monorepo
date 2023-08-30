@@ -1,10 +1,3 @@
 <template>
-  <div class="s-structure"><slot></slot></div>
+  <div class="s-structure" w="8/10" max-w-1440px mx-auto><slot></slot></div>
 </template>
-<style scoped lang="scss">
-.s-structure {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>

@@ -17,6 +17,7 @@ import { SStructure } from 'shared/ui/SStructure';
       top-0
       z--1
       bottom-drop-shadow
+      class="2xl:(object-cover w-full)"
     />
   </q-header>
 </template>

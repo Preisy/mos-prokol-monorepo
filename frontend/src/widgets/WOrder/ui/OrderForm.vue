@@ -4,7 +4,7 @@ import { Form, useField, useForm } from 'vee-validate';
 import { useI18n } from 'vue-i18n';
 import { z } from 'zod';
 import { SBtn } from 'shared/ui/SBtn';
-import FormInput from './FormInput.vue';
+import { SInput } from 'shared/ui/SInput';
 
 const { t } = useI18n();
 
@@ -39,7 +39,7 @@ const onSubmit = handleSubmit((values) => {
     </div>
     <div mb-6>
       <div mb-2>
-        <FormInput
+        <SInput
           v-model="telephone"
           name="telephone"
           :title="$t('order.fields.telephone')"
@@ -47,7 +47,7 @@ const onSubmit = handleSubmit((values) => {
         />
       </div>
       <div>
-        <FormInput
+        <SInput
           v-model="question"
           name="question"
           :title="$t('order.fields.question')"
