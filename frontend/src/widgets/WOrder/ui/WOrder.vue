@@ -14,7 +14,9 @@ import OrderForm from './OrderForm.vue';
       left-0
       top-0
       z-0
-      w-full
+      w-auto
+      h-full
+      class="xl:(w-full h-auto)"
       select-none
       pointer-events-none
     />
