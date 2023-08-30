@@ -28,8 +28,8 @@ import FooterLinks from './FooterLinks.vue';
 
           <SPhoneNumber
             mb-4
-            gray-part="8 (916)"
-            white-part="848-86-23"
+            gray-part="8 (916) "
+            white-part="848 - 86-23"
             text-base
           />
 

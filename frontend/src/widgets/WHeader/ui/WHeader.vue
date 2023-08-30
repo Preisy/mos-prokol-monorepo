@@ -8,7 +8,7 @@ import { SStructure } from 'shared/ui/SStructure';
   <q-header class="w-header" bg-unset fixed>
     <SStructure py-5.8 flex flex-row justify-between items-center>
       <SLogo />
-      <SPhoneNumber gray-part="8 (916) " white-part="848-86-23" />
+      <SPhoneNumber gray-part="8 (916) " white-part="848 - 86-23" />
     </SStructure>
     <img
       src="/widgets/WHeader/background.svg"

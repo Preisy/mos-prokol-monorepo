@@ -9,7 +9,7 @@ const { tm } = useI18n();
 
 <template>
   <div class="w-home" overflow-hidden relative z-1>
-    <SStructure py-70>
+    <SStructure py-70 pb-6rem>
       <div flex flex-row justify-end>
         <HomeChip v-for="card in tm('home.cards')" :key="card">
           {{ card }}
@@ -32,7 +32,7 @@ const { tm } = useI18n();
       z--1
       w-auto
       h-full
-      class="4xl:(w-full h-auto)"
+      class="2xl:(w-full h-auto)"
     />
   </div>
 </template>
