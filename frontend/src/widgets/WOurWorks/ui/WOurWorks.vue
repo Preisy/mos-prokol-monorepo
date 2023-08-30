@@ -17,7 +17,7 @@ const slides = chunk(
 
 <template>
   <div class="w-our-works" bg-black overflow-hidden>
-    <SStructure py-40>
+    <SStructure py-4rem>
       <div text-center>
         <SPrettyHeader w-fit block class="header">
           {{ $t('ourWorks.header') }}

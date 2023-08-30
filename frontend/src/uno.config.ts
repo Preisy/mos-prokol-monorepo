@@ -46,6 +46,7 @@ export default defineConfig<Theme>({
       xl: '1280px',
       '2xl': '1440px',
       '3xl': '1600px',
+      '4xl': '1920px',
     },
   },
   preflights: [],
@@ -63,6 +64,13 @@ export default defineConfig<Theme>({
       {
         background:
           'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.70) 78.97%)',
+      },
+    ],
+    [
+      'bg-gradient-shadow-left',
+      {
+        background:
+          'linear-gradient(71deg, rgba(0, 0, 0, 0.6) 35.1%, rgba(0, 0, 0, 0) 100%)',
       },
     ],
     [

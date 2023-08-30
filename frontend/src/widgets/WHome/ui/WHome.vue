@@ -32,7 +32,7 @@ const { tm } = useI18n();
       z--1
       w-auto
       h-full
-      class="3xl:(w-full h-auto)"
+      class="4xl:(w-full h-auto)"
     />
   </div>
 </template>

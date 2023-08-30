@@ -7,9 +7,9 @@ const { tm } = useI18n();
 </script>
 <template>
   <div class="w-about-us" bg-black overflow-hidden relative mt--16>
-    <SStructure py-40 relative z-1>
+    <SStructure pt-4rem pb-3rem relative z-1>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
-      <div w="6/10" text-white font-600>
+      <div w="7.5/10" text-white font-600>
         <div v-for="(line, lineIndex) of tm('about.desc')" :key="lineIndex">
           <p
             v-html="line"
@@ -18,17 +18,23 @@ const { tm } = useI18n();
         </div>
       </div>
     </SStructure>
-    <img
-      src="/widgets/WAboutUs/background.png"
+    <div
       absolute
-      z-0
-      brightness-70
-      top--8
       rounded="5/10"
-      h="11/10"
-      w-auto
-      right-0
       translate-x="4/10"
-    />
+      top-0
+      right-0
+      h="11/10"
+      class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left)"
+    >
+      <img
+        src="/widgets/WAboutUs/background.png"
+        z-0
+        brightness-70
+        rounded="5/10"
+        h-full
+        w-full
+      />
+    </div>
   </div>
 </template>
