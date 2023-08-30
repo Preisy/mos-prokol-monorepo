@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { SBtn } from 'shared/ui/SButton';
+import { SBtn } from 'shared/ui/SBtn';
 import { SStructure } from 'shared/ui/SStructure';
 import HomeChip from './HomeChip.vue';
 

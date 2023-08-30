@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SBtn } from 'shared/ui/SButton';
+import { SBtn } from 'shared/ui/SBtn';
 import { SLogo } from 'shared/ui/SLogo';
 import { SPhoneNumber } from 'shared/ui/SPhoneNumber';
 import { SStructure } from 'shared/ui/SStructure';

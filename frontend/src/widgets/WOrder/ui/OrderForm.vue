@@ -3,7 +3,7 @@ import { toTypedSchema } from '@vee-validate/zod';
 import { Form, useField, useForm } from 'vee-validate';
 import { useI18n } from 'vue-i18n';
 import { z } from 'zod';
-import { SBtn } from 'shared/ui/SButton';
+import { SBtn } from 'shared/ui/SBtn';
 import FormInput from './FormInput.vue';
 
 const { t } = useI18n();
