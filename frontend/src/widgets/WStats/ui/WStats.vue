@@ -42,6 +42,7 @@ const lines = tm('stats.lines') as StatLineProps[];
       w="6.1/10"
       h="1.01/1"
       z-0
+      class="3xl:(w-3/10 h-auto)"
     />
   </div>
 </template>
