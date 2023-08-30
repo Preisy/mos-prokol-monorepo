@@ -20,7 +20,7 @@ import FooterLinks from './FooterLinks.vue';
           <div mb-5>
             <SBtn
               text="11px! neutral-6!"
-              class="[&>.s-btn\_shadow]:bg-neutral-5! [&>.s-btn\_wrapper>.s-btn\_background]:bg-neutral"
+              class="[&>.s-btn\_shadow]:bg-neutral-5! [&>.s-btn\_wrapper>.s-btn\_background]:(bg-neutral bg-none)"
             >
               {{ $t('footer.btn') }}
             </SBtn>

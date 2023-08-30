@@ -57,26 +57,29 @@ export default defineConfig<Theme>({
     ],
     [
       'bg-gradient-yellow',
-      { background: 'linear-gradient(180deg, #fceb91 0%, #ffd743 100%);' },
+      {
+        'background-image':
+          'linear-gradient(180deg, #fceb91 0%, #ffd743 100%);',
+      },
     ],
     [
       'bg-gradient-shadow',
       {
-        background:
+        'background-image':
           'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.55%, rgba(0, 0, 0, 0.70) 78.97%)',
       },
     ],
     [
       'bg-gradient-shadow-left',
       {
-        background:
+        'background-image':
           'linear-gradient(71deg, rgba(0, 0, 0, 0.6) 35.1%, rgba(0, 0, 0, 0) 100%)',
       },
     ],
     [
       'bg-gradient-light',
       {
-        background: 'linear-gradient(180deg, #F9F9F9 0%, #E1DED3 100%)',
+        'background-image': 'linear-gradient(180deg, #F9F9F9 0%, #E1DED3 100%)',
       },
     ],
     [
