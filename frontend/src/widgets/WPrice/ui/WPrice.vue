@@ -19,6 +19,8 @@ import PriceSpreadsheet from './PriceSpreadsheet.vue';
         top-0
         left-0
         z-0
+        select-none
+        pointer-events-none
       />
     </SStructure>
   </div>

@@ -15,6 +15,8 @@ import OrderForm from './OrderForm.vue';
       top-0
       z-0
       w-full
+      select-none
+      pointer-events-none
     />
   </div>
 </template>

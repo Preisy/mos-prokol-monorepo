@@ -61,6 +61,8 @@ import FooterLinks from './FooterLinks.vue';
       w-full
       top-0
       z-0
+      select-none
+      pointer-events-none
     />
   </div>
 </template>

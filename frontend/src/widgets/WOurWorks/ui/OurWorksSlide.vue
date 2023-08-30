@@ -14,6 +14,8 @@ defineProps<{
         :src="src"
         :class="{ 'row-span-2 col-span-2': index === 0 }"
         rounded-2.4
+        select-none
+        pointer-events-none
       />
     </div>
   </q-carousel-slide>
