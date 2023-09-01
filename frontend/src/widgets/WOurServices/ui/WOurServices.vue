@@ -19,7 +19,7 @@ const buildSlides = (slidesTextes: string[][]) =>
 const slides = buildSlides(tm('services.slides'));
 </script>
 <template>
-  <div class="content-wrapper" bg-black overflow-hidden>
+  <div class="w-our-services" bg-black overflow-hidden>
     <SStructure py-4rem>
       <SPrettyHeader w-fit left="5/10" translate-x="-5/10">
         {{ $t('services.header') }}
