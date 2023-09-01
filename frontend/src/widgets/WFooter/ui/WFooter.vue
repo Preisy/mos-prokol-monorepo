@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { SBtn } from 'shared/ui/SBtn';
 import { SLogo } from 'shared/ui/SLogo';
-import { SPhoneNumber } from 'shared/ui/SPhoneNumber';
+import { PhoneNumber, SPhoneNumber } from 'shared/ui/SPhoneNumber';
 import { SStructure } from 'shared/ui/SStructure';
 import FooterLinks from './FooterLinks.vue';
+
+const numbers: PhoneNumber[] = [
+  { grayPart: '8 (916) ', whitePart: '848-86-23' },
+  { grayPart: '8 (965) ', whitePart: '356-02-49' },
+];
 </script>
 
 <template>
@@ -26,12 +31,7 @@ import FooterLinks from './FooterLinks.vue';
             </SBtn>
           </div>
 
-          <SPhoneNumber
-            mb-4
-            gray-part="8 (916) "
-            white-part="848 - 86-23"
-            text-base
-          />
+          <SPhoneNumber :numbers="numbers" mb-4 text-base />
 
           <div flex flex-col text-primary3>
             <span text-base font-700>

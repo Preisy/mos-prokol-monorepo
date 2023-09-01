@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { SLogo } from 'shared/ui/SLogo';
-import { SPhoneNumber } from 'shared/ui/SPhoneNumber';
+import { SPhoneNumber, PhoneNumber } from 'shared/ui/SPhoneNumber';
 import { SStructure } from 'shared/ui/SStructure';
+
+const numbers: PhoneNumber[] = [
+  { grayPart: '8 (916) ', whitePart: '848-86-23' },
+  { grayPart: '8 (965) ', whitePart: '356-02-49' },
+];
 </script>
 
 <template>
   <q-header class="w-header" bg-unset fixed>
     <SStructure py-5.8 flex flex-row justify-between items-center>
       <SLogo />
-      <SPhoneNumber gray-part="8 (916) " white-part="848 - 86-23" />
+      <SPhoneNumber :numbers="numbers" />
     </SStructure>
     <img
       src="/widgets/WHeader/background.svg"
