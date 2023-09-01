@@ -33,18 +33,18 @@ const lines = tm('stats.lines') as StatLineProps[];
           {{ $t('stats.header') }}
         </SPrettyHeader>
       </div>
+      <img
+        src="/widgets/WStats/background.png"
+        absolute
+        right="-2/10"
+        top--1px
+        w-auto
+        h="1.01/1"
+        z-0
+        select-none
+        pointer-events-none
+      />
     </SStructure>
-    <img
-      src="/widgets/WStats/background.png"
-      absolute
-      right-0
-      top--1px
-      w="6.1/10"
-      h="1.01/1"
-      z-0
-      select-none
-      pointer-events-none
-      class="3xl:(w-3/10 h-auto)"
-    />
+    <div absolute left="7/10" top-0 bottom-0 right-0 bg-black z--1 />
   </div>
 </template>

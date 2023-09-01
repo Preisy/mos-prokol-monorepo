@@ -12,7 +12,8 @@ import OrderForm from './OrderForm.vue';
       src="/widgets/WOrder/background.png"
       absolute
       left-0
-      top-0
+      top="50%"
+      translate-y="-50%"
       z-0
       w-auto
       h-full
