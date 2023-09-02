@@ -2,11 +2,11 @@
 import { QInputProps } from 'quasar';
 import { useField } from 'vee-validate';
 
-interface FormInputProps extends Omit<QInputProps, 'modelValue'> {
+export interface SInputProps extends Omit<QInputProps, 'modelValue'> {
   title: string;
   name: string;
 }
-const props = defineProps<FormInputProps>();
+const props = defineProps<SInputProps>();
 
 const { value, errorMessage } = useField<string | number | undefined>(
   () => props.name
