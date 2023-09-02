@@ -41,7 +41,7 @@ export default defineConfig<Theme>({
       '2xl': ['3rem', '1.4'],
     },
     breakpoints: {
-      sm: '450px',
+      sm: '390px',
       md: '900px',
       xl: '1280px',
       '2xl': '1440px',
@@ -49,7 +49,57 @@ export default defineConfig<Theme>({
       '4xl': '1920px',
     },
   },
-  preflights: [],
+  preflights: [
+    {
+      getCSS: ({ theme }) => {
+        const fontSizesMobile = {
+          sm: '',
+          base: '0.6rem',
+          md: '0.7rem',
+          lg: '',
+          xl: '1.2rem',
+          '2xl': '1.3rem',
+        } as const;
+
+        const pxIn1Rem = 20; //See app.scss in app/styles/app.scss
+        const mobileScreen = theme.breakpoints?.sm;
+        const desktopScreen = theme.breakpoints?.['2xl'];
+        if (!mobileScreen || !desktopScreen) return '';
+        const deltaScreen =
+          (parseInt(desktopScreen) - parseInt(mobileScreen)) / pxIn1Rem;
+        const mobileScreenInRems = parseInt(mobileScreen) / pxIn1Rem + 'rem';
+
+        let result = '';
+        for (const font in fontSizesMobile) {
+          const selector = `.text-${font}, [text-${font}=""]`;
+          const minFont = fontSizesMobile[font as keyof typeof fontSizesMobile];
+          const maxFont = theme.fontSize?.[font]?.[0];
+          if (!minFont || !maxFont) continue;
+
+          const delta = parseFloat(maxFont) - parseFloat(minFont);
+
+          const fluid = `
+          ${selector} {
+            font-size: ${minFont} !important;
+          }
+          @media screen and (min-width: ${mobileScreen}) {
+            ${selector} {
+              font-size: calc(${minFont} + ${delta} * ((100vw - ${mobileScreenInRems}) / ${deltaScreen})) !important;
+            }
+          }
+          @media screen and (min-width: ${desktopScreen}) {
+            ${selector} {
+              font-size: ${maxFont} !important;
+            }
+          }
+          `;
+          result = result.concat(fluid);
+        }
+
+        return result;
+      },
+    },
+  ],
   rules: [
     [
       'bottom-drop-shadow',
