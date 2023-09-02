@@ -1,19 +1,31 @@
 <script setup lang="ts">
 import { QInputProps } from 'quasar';
+import { useField } from 'vee-validate';
 
-interface FormInputProps extends QInputProps {
+interface FormInputProps extends Omit<QInputProps, 'modelValue'> {
   title: string;
+  name: string;
 }
+const props = defineProps<FormInputProps>();
 
-defineProps<FormInputProps>();
+const { value, errorMessage } = useField<string | number | undefined>(
+  () => props.name
+);
 </script>
 
 <template>
   <div text-base font-600>
-    <div text-secondary3 mb-1>{{ title }}</div>
+    <div text-secondary3 mb-1>
+      <span>
+        {{ title }}
+      </span>
+      <span v-if="errorMessage" text-red-5 float-right>{{ errorMessage }}</span>
+    </div>
 
     <div relative overflow-hidden rounded-0 class="[&>.q-field]:p-0">
       <q-input
+        type="text"
+        v-model="value"
         v-bind="{ ...$attrs, ...$props }"
         borderless
         relative

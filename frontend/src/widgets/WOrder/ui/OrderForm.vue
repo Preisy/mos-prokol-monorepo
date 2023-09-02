@@ -1,6 +1,7 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
-import { Form, useField, useForm } from 'vee-validate';
+import { useForm } from 'vee-validate';
 import { useI18n } from 'vue-i18n';
 import { z } from 'zod';
 import { SBtn } from 'shared/ui/SBtn';
@@ -20,19 +21,24 @@ const validationSchema = toTypedSchema(
       .max(2000, t('order.errors.questionLong')),
   })
 );
+// const validationSchema = toTypedSchema(
+//   z.object({
+//     telephone: z.string().optional(),
+//     question: z.string().optional(),
+//   })
+// );
 
 const { handleSubmit } = useForm({
   validationSchema,
 });
-const { value: telephone } = useField<string>('telephone');
-const { value: question } = useField<string>('question');
+
 const onSubmit = handleSubmit((values) => {
   console.log(values);
 });
 </script>
 
 <template>
-  <Form bg-primary px-12 py-8 rounded-4 @submit="onSubmit">
+  <form bg-primary px-12 py-8 rounded-4 @submit="onSubmit">
     <div font-800 text-4.4 line-height-5.72 text-center>
       <span text-secondary2>{{ $t('order.desc') + ' ' }}</span> <br />
       <span text-attractive2>{{ $t('order.highlighted') }}</span>
@@ -40,7 +46,6 @@ const onSubmit = handleSubmit((values) => {
     <div mb-6>
       <div mb-2>
         <SInput
-          v-model="telephone"
           name="telephone"
           :title="$t('order.fields.telephone')"
           mask="# (###) ###-##-##"
@@ -48,7 +53,6 @@ const onSubmit = handleSubmit((values) => {
       </div>
       <div>
         <SInput
-          v-model="question"
           name="question"
           :title="$t('order.fields.question')"
           type="textarea"
@@ -60,5 +64,5 @@ const onSubmit = handleSubmit((values) => {
     <div text-center>
       <SBtn type="submit">{{ $t('order.button') }}</SBtn>
     </div>
-  </Form>
+  </form>
 </template>
