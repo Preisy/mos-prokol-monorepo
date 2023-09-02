@@ -33,11 +33,11 @@ const numbers: PhoneNumber[] = [
 
           <SPhoneNumber :numbers="numbers" mb-4 text-base />
 
-          <div flex flex-col text-primary3>
-            <span text-base font-700>
-              {{ $t('footer.addressTitle') }}
+          <div text-primary3 text-base>
+            <span font-700>
+              {{ $t('footer.addressTitle') + ' ' }}
             </span>
-            <span text-sm>{{ $t('footer.address') }}</span>
+            <span>{{ $t('footer.address') }}</span>
           </div>
         </div>
       </div>

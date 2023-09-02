@@ -17,7 +17,7 @@ const slides = chunk(
 
 <template>
   <div class="w-our-works" bg-black overflow-hidden>
-    <SStructure py-4rem>
+    <SStructure py-4rem pb-8rem relative>
       <div text-center>
         <SPrettyHeader w-fit block class="header">
           {{ $t('ourWorks.header') }}
@@ -31,6 +31,13 @@ const slides = chunk(
           :img-src="slide"
         />
       </SCarousel>
+      <q-img
+        src="/widgets/WOurWorks/arrow.png"
+        absolute
+        bottom-6
+        right--15
+        w-60
+      />
     </SStructure>
   </div>
 </template>

@@ -45,6 +45,6 @@ const lines = tm('stats.lines') as StatLineProps[];
         pointer-events-none
       />
     </SStructure>
-    <div absolute left="7/10" top-0 bottom-0 right-0 bg-black z--1 />
+    <div absolute left="7/10" top-0 bottom-0 right-0 bg-black z-0 />
   </div>
 </template>
