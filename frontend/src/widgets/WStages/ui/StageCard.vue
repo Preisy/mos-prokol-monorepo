@@ -16,7 +16,7 @@ const textId =
 </script>
 
 <template>
-  <div
+  <a
     text-neutral-400
     bg-primary
     p-l-8
@@ -43,7 +43,7 @@ const textId =
     <div class="desc" text-md uppercase font-600 transition-300>
       <slot></slot>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped lang="scss">

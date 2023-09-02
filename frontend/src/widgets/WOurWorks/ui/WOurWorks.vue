@@ -23,7 +23,7 @@ const slides = chunk(
           {{ $t('ourWorks.header') }}
         </SPrettyHeader>
       </div>
-      <SCarousel :infinite="true" :length="slides.length">
+      <SCarousel need-down-controls :infinite="true" :length="slides.length">
         <OurWorksSlide
           v-for="(slide, index) in slides"
           :key="index"

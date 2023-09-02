@@ -5,11 +5,13 @@ import { SNavLink } from 'shared/ui/SNavLink';
 const { tm } = useI18n();
 const links = tm('footer.links') as Array<string>;
 const linksSelectors = [
+  '.w-about-us',
   '.w-our-services',
+  '.w-price',
+  '.w-advances',
   '.w-order',
   '.w-our-works',
   '.w-stages',
-  '.w-footer',
 ];
 if ((links as Array<string>).length !== linksSelectors.length)
   throw new Error('links.length !== selectors.length');

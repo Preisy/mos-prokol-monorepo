@@ -2,14 +2,20 @@
 import { QCarousel, QCarouselProps } from 'quasar';
 import { ref } from 'vue';
 import CarouselControlBtn from './CarouselControlBtn.vue';
+import CarouselDownControls from './CarouselDownControls.vue';
 
 interface SCarouselProps extends QCarouselProps {
   length: number;
+  needDownControls?: boolean;
 }
 
-defineProps<SCarouselProps>();
+const props = defineProps<SCarouselProps>();
 const slide = ref('0');
 const carousel = ref<InstanceType<typeof QCarousel>>();
+onMounted(() => {
+  for (let i = 0; i < props.length; i++)
+    setTimeout(() => carousel.value?.next(), 50);
+});
 </script>
 
 <template>
@@ -25,9 +31,14 @@ const carousel = ref<InstanceType<typeof QCarousel>>();
       mx-auto
       h-auto
       bg-unset
+      keep-alive
     >
       <slot></slot>
     </q-carousel>
+
+    <div mt-2 v-if="needDownControls">
+      <CarouselDownControls :count="length" v-model:current="slide" />
+    </div>
 
     <div
       v-if="length > 1"

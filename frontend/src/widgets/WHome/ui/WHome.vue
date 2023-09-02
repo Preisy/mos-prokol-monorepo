@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { scrollToElement } from 'shared/api/SmoothScrollUtils';
 import { SBtn } from 'shared/ui/SBtn';
 import { SStructure } from 'shared/ui/SStructure';
 import HomeChip from './HomeChip.vue';
 
 const { tm } = useI18n();
+
+const targetElement = ref<HTMLElement>();
+const onclick = () => {
+  if (!targetElement.value) return;
+  scrollToElement(targetElement.value);
+};
+onMounted(
+  () => (targetElement.value = <HTMLElement>document.querySelector('.w-order'))
+);
 </script>
 
 <template>
@@ -21,7 +31,7 @@ const { tm } = useI18n();
         </span>
       </div>
       <div text-center mt-4>
-        <SBtn>{{ $t('home.btn') }}</SBtn>
+        <SBtn @click="onclick">{{ $t('home.btn') }}</SBtn>
       </div>
     </SStructure>
 
