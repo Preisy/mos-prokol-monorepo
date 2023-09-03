@@ -17,7 +17,10 @@ const numbers: PhoneNumber[] = [
     </SStructure>
     <img
       src="/widgets/WHeader/background.svg"
-      h-32
+      h-24
+      left="-2/10"
+      md:left-auto
+      md:h-32
       absolute
       top-0
       z--1
