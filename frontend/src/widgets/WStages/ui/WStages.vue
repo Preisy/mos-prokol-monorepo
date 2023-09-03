@@ -6,7 +6,7 @@ import StagesPresentation from './StagesPresentation.vue';
 
 <template>
   <div class="w-stages" bg-black overflow-hidden>
-    <SStructure py-3.5rem>
+    <SStructure pb-7rem md:py-3.5rem>
       <SPrettyHeader>{{ $t('stages.header') }}</SPrettyHeader>
       <StagesPresentation />
     </SStructure>

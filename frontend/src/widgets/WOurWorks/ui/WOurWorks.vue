@@ -5,19 +5,19 @@ import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
 import OurWorksSlide from './OurWorksSlide.vue';
 
-const slideSize = 3;
+const q = useQuasar();
+const slideSize = computed(() => (q.screen.lt.sm ? 1 : 3));
 const slidesImages = [...Array(3).keys()].map(
   (serialNumber) => `widgets/WOurWorks/${serialNumber}.png`
 );
-const slides = chunk(
-  slidesImages.concat(slidesImages).concat(slidesImages),
-  slideSize
+const slides = computed(() =>
+  chunk(slidesImages.concat(slidesImages).concat(slidesImages), slideSize.value)
 );
 </script>
 
 <template>
   <div class="w-our-works" bg-black overflow-hidden>
-    <SStructure py-4rem pb-8rem relative>
+    <SStructure py-2.5rem pb-4rem class="sm:(py-4rem pb-8rem)" relative>
       <div text-center>
         <SPrettyHeader w-fit block class="header">
           {{ $t('ourWorks.header') }}
@@ -35,8 +35,10 @@ const slides = chunk(
         src="/widgets/WOurWorks/arrow.png"
         absolute
         bottom-6
-        right--15
-        w-60
+        right-0
+        sm:right--15
+        w-30
+        sm:w-60
       />
     </SStructure>
   </div>

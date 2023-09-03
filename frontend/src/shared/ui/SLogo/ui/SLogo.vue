@@ -1,5 +1,5 @@
 <template>
-  <div w-24 rounded-10 inline-block class="s-logo">
+  <div rounded-10 inline-block class="s-logo">
     <q-img
       src="/shared/SLogo/logo.svg"
       w-full

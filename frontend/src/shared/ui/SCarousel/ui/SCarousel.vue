@@ -27,6 +27,7 @@ onMounted(() => {
       transition-prev="slide-right"
       transition-next="slide-left"
       animated
+      :swipable="true"
       w="9/10"
       mx-auto
       h-auto
@@ -36,20 +37,24 @@ onMounted(() => {
       <slot></slot>
     </q-carousel>
 
-    <div mt-2 v-if="needDownControls">
+    <div v-if="needDownControls" sm:mt-2 z-1 relative>
       <CarouselDownControls :count="length" v-model:current="slide" />
     </div>
 
     <div
       v-if="length > 1"
-      class="controls top-5/10"
-      w-full
+      class="controls"
+      w="11/10"
+      left="-5/100"
+      sm:w-full
+      sm:left-0
       flex
       flex-row
       justify-between
       text-attractive2
       text-base
       absolute
+      top="5/10"
       translate-y="-5/10"
     >
       <CarouselControlBtn @click="carousel?.previous()">

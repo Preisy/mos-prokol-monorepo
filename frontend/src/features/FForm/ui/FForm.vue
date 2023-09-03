@@ -49,6 +49,7 @@ const onSubmit = handleSubmit((values) => {
         mb-2
       >
         <SInput
+          class="f-form_input"
           :name="name"
           :title="title"
           v-bind="sInputOptions"
@@ -57,7 +58,7 @@ const onSubmit = handleSubmit((values) => {
       </div>
     </div>
     <div text-center>
-      <SBtn type="submit">{{ $t('order.button') }}</SBtn>
+      <SBtn class="f-form_btn" type="submit">{{ $t('order.button') }}</SBtn>
     </div>
   </form>
 </template>

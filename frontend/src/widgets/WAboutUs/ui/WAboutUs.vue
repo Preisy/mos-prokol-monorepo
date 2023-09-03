@@ -7,14 +7,15 @@ const { tm } = useI18n();
 </script>
 <template>
   <div class="w-about-us" bg-black overflow-hidden relative mt--16>
-    <SStructure pt-4rem pb-3rem relative z-0>
+    <SStructure pt-4rem pb-1rem relative z-0>
       <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
-      <div w="7.5/10" text-white font-600>
+      <div w-full class="2xl:w-7.5/10" text-white font-600 text-md>
         <div v-for="(line, lineIndex) of tm('about.desc')" :key="lineIndex">
           <p
+            mb-0.7rem
             v-html="line"
-            class="[&>strong]:text-attractive2 [&>li::marker]:text-attractive2"
-          ></p>
+            class="xl:mb-0.8rem [&>strong]:text-attractive2 [&>li::marker]:text-attractive2"
+          />
         </div>
       </div>
       <div

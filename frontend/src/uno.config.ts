@@ -36,12 +36,15 @@ export default defineConfig<Theme>({
       sm: ['0.7rem', 'normal'],
       base: ['0.9rem', '1.3'],
       md: ['1rem', '1.4'],
-      lg: ['1.5rem', '1.875rem'],
+      mds: ['1rem', '1.4'],
+      lgs: ['1.2rem', '1'],
+      lgx: ['1.2rem', '1'],
       xl: ['2.5rem', '1.4'],
       '2xl': ['3rem', '1.4'],
     },
     breakpoints: {
       sm: '390px',
+      '2sm': '500px',
       md: '900px',
       xl: '1280px',
       '2xl': '1440px',
@@ -55,8 +58,10 @@ export default defineConfig<Theme>({
         const fontSizesMobile = {
           sm: '',
           base: '0.6rem',
+          mds: '0.5rem',
           md: '0.7rem',
-          lg: '',
+          lgs: '0.6rem',
+          lgx: '0.7rem',
           xl: '1.2rem',
           '2xl': '1.3rem',
         } as const;

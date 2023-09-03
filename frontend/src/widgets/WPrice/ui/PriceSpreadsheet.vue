@@ -15,16 +15,26 @@ const rows: {
 </script>
 
 <template>
-  <div bg-primary flex flex-col py-8 px-16 box-border w-min rounded-3.6 mx-auto>
+  <div
+    bg-primary
+    flex
+    flex-col
+    box-border
+    w-min
+    rounded-3.6
+    mx-auto
+    p-3.4
+    class="md:(py-8 px-16)"
+  >
     <SPrettyHeader
-      class="[&>.main]:(text-12 text-black) [&>.secondary]:(left-4 top--8 text-white)"
+      class="[&>.main]:(text-12 text-black) [&>.secondary]:(text-white)"
       mx-auto
       block
     >
       {{ $t('price.spreadsheet.header') }}
     </SPrettyHeader>
-    <table text-4.8 text-center w-min border-collapse uppercase>
-      <tr bg="attractive2/10" font-600 whitespace-nowrap>
+    <table text-center w-fit border-collapse uppercase sm:whitespace-nowrap>
+      <tr text-lgx bg="attractive2/10" font-600>
         <PriceCell class="border-(l-0! t-0!)">
           {{ $t('price.spreadsheet.firstRow.diameter') }}
         </PriceCell>
@@ -32,7 +42,7 @@ const rows: {
           {{ $t('price.spreadsheet.firstRow.price') }}
         </PriceCell>
       </tr>
-      <tr v-for="(row, index) in rows" :key="index" font-500>
+      <tr v-for="(row, index) in rows" :key="index" font-500 text-lgs>
         <PriceCell
           class="border-l-0!"
           :class="{ 'border-b-0!': index === rows.length - 1 }"

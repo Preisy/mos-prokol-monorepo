@@ -5,7 +5,7 @@ defineProps<QBtnProps>();
 </script>
 <template>
   <q-btn
-    class="[&>.q-focus-helper]:display-none"
+    class="[&>.q-focus-helper]:display-none before-display-none"
     hover="scale-110"
     w-9.6
     h-9.6
@@ -13,6 +13,7 @@ defineProps<QBtnProps>();
     round
     :ripple="false"
     padding="none"
+    dense
     v-bind="{ ...$props }"
   >
     <slot></slot>

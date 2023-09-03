@@ -19,28 +19,46 @@ const textId =
   <a
     text-neutral-400
     bg-primary
-    p-l-8
-    p-y-4
-    p-r-3.6
+    px-2
+    py-3.2
+    md:pl-8
+    md:py-4
+    md:pr-3.6
     flex
     flex-row
-    w-27rem
     cursor-pointer
     border-solid
+    border-y-neutral-3
+    border-y-1
     border-0
     class="card"
     :class="{
       'rounded-tl-0.6rem': first,
       'rounded-bl-0.6rem': last,
-      'w-28rem ml--1rem rounded-l-0.6rem border-attractive2 border-l-6 [&>.index]:text-attractive2 [&>.desc]:text-black':
+      'ml--1rem rounded-l-0.6rem border-attractive2 border-l-6 [&>.index]:text-attractive2 [&>.desc]:text-black':
         id === currentIndex,
     }"
     @click="$emit('update:currentIndex', id)"
   >
-    <div class="index" text-xl line-height-none font-700 m-r-8.8 transition-300>
+    <div
+      class="index"
+      text-xl
+      line-height-none
+      font-700
+      mr-2
+      md:mr-8.8
+      transition-300
+    >
       {{ textId }}
     </div>
-    <div class="desc" text-md uppercase font-600 transition-300>
+    <div
+      class="desc"
+      :class="{ 'line-height-none': $q.screen.lt.md }"
+      text-mds
+      uppercase
+      font-600
+      transition-300
+    >
       <slot></slot>
     </div>
   </a>
