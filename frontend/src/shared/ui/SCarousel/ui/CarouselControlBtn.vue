@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { QBtnProps } from 'quasar';
 
-defineProps<QBtnProps>();
+interface Props extends QBtnProps {}
+defineProps<Props>();
 </script>
 <template>
   <q-btn
