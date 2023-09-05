@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { FForm } from 'features/FForm';
+import { SArrow } from 'shared/ui/SArrow';
 import { fieldsSchema } from '../model';
 
 const { t } = useI18n();
@@ -8,12 +9,25 @@ const fields = fieldsSchema(t);
 </script>
 
 <template>
-  <div class="sm:(px-12 py-8)" p-7 bg-primary rounded-4>
+  <div class="sm:(px-12 py-8)" p-7 bg-primary rounded-4 relative>
     <div class="sm:text-24px" text-18px font-800 line-height-5.72 text-center>
       <span text-secondary2>{{ $t('order.desc') + ' ' }}</span> <br />
       <span text-attractive2>{{ $t('order.highlighted') }}</span>
     </div>
-    <FForm :fields="fields" class="order-form" />
+    <FForm
+      input-classes="text-neutral-5/95"
+      :fields="fields"
+      class="order-form"
+    />
+    <SArrow
+      absolute
+      w-5rem
+      sm:w-6.5rem
+      bottom-0
+      left="5/10"
+      z-2
+      translate-y="4.5/10"
+    />
   </div>
 </template>
 

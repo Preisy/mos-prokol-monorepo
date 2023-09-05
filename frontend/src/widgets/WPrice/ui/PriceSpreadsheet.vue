@@ -20,7 +20,8 @@ const rows: {
     flex
     flex-col
     box-border
-    w-min
+    w-fit
+    sm:w-min
     rounded-3.6
     mx-auto
     p-3.4

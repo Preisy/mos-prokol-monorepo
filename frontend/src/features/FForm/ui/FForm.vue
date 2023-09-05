@@ -16,6 +16,7 @@ export type FieldsSchema = FieldSchema[];
 
 const props = defineProps<{
   fields: FieldSchema[];
+  inputClasses?: string;
 }>();
 
 const validationSchema = toTypedSchema(
@@ -50,6 +51,7 @@ const onSubmit = handleSubmit((values) => {
       >
         <SInput
           class="f-form_input"
+          :input-class="inputClasses"
           :name="name"
           :title="title"
           v-bind="sInputOptions"

@@ -43,7 +43,7 @@ const brDelta = computed(() =>
       </div>
       <div
         absolute
-        left-10rem
+        left-9.2rem
         xl:left-auto
         right="-2/10"
         top--1px
@@ -64,7 +64,7 @@ const brDelta = computed(() =>
           sm:top="5/10"
           left="5/10"
           translate="-5/10"
-          w-18
+          w-16
           md:w-40
           xl:w-64
         />

@@ -14,7 +14,7 @@ const slide = ref('0');
 const carousel = ref<InstanceType<typeof QCarousel>>();
 onMounted(() => {
   for (let i = 0; i < props.length; i++)
-    setTimeout(() => carousel.value?.next(), 50);
+    setTimeout(() => carousel.value?.next(), 0);
 });
 </script>
 
@@ -27,12 +27,14 @@ onMounted(() => {
       transition-prev="slide-right"
       transition-next="slide-left"
       animated
-      :swipable="true"
+      swipeable
       w="9/10"
       mx-auto
       h-auto
       bg-unset
       keep-alive
+      z-1
+      class="[&>.q-panel.scroll]:overflow-hidden"
     >
       <slot></slot>
     </q-carousel>
@@ -54,6 +56,7 @@ onMounted(() => {
       text-attractive2
       text-base
       absolute
+      z-0
       top="5/10"
       translate-y="-5/10"
     >

@@ -36,7 +36,7 @@ const slides = computed(() =>
         absolute
         bottom-6
         right-0
-        sm:right--15
+        sm:right--10
         w-30
         sm:w-60
       />

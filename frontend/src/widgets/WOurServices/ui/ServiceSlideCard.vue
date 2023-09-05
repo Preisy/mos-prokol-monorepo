@@ -16,7 +16,7 @@ defineProps<WServiceSlideCardProps>();
       text-0
       h-full
     >
-      <img :src="imgSrc" w-full relative h-auto />
+      <q-img :src="imgSrc" :draggable="false" w-full relative h-auto />
     </div>
     <p absolute bottom-1 left-3.4 text-base text-primary font-700>{{ text }}</p>
   </div>

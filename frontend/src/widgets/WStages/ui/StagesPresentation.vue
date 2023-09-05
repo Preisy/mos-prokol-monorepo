@@ -26,6 +26,9 @@ window.addEventListener(
     stageDisplayheight.value = calcHeight();
   }, 200)
 );
+watch(currentActive, () => {
+  setTimeout(() => (stageDisplayheight.value = calcHeight()), 200);
+});
 </script>
 
 <template>
@@ -52,7 +55,7 @@ window.addEventListener(
     <div
       w-full
       grid-col-start-20
-      grid-col-end-34
+      grid-col-end-35
       class="display"
       :style="{ height: stageDisplayheight }"
     >
@@ -70,6 +73,7 @@ window.addEventListener(
       absolute
       py="1.4!"
       px="3!"
+      class="[&>p]:text-12px!"
     >
       {{ stagesTextes[currentActive].displayText }}
     </DisplayCard>

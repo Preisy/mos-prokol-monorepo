@@ -8,7 +8,7 @@ defineProps<AdvanceCardProps>();
 
 <template>
   <div
-    class="sm:(px-5 py-7)"
+    class="2sm:(px-5 py-7)"
     p-4
     bg-white
     rounded-2

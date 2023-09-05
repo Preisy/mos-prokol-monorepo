@@ -43,8 +43,8 @@ export default defineConfig<Theme>({
       '2xl': ['3rem', '1.4'],
     },
     breakpoints: {
-      sm: '390px',
-      '2sm': '500px',
+      sm: '450px',
+      '2sm': '600px',
       md: '900px',
       xl: '1280px',
       '2xl': '1440px',
