@@ -43,7 +43,7 @@ const brDelta = computed(() =>
       </div>
       <div
         absolute
-        left-9.2rem
+        left-10rem
         xl:left-auto
         right="-2/10"
         top--1px
@@ -60,8 +60,7 @@ const brDelta = computed(() =>
         />
         <SLogo
           absolute
-          top="2/10"
-          sm:top="5/10"
+          top="5/10"
           left="5/10"
           translate="-5/10"
           w-16

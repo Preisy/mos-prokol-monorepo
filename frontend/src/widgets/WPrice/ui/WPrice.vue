@@ -5,7 +5,7 @@ import PriceSpreadsheet from './PriceSpreadsheet.vue';
 </script>
 
 <template>
-  <div class="w-price" bg-black overflow-hidden relative>
+  <div class="w-price" overflow-hidden relative>
     <SStructure py-30 pb-2rem w="fit!" sm:w="min!" relative>
       <PriceSpreadsheet relative z-1></PriceSpreadsheet>
       <div relative z-1 text-primary font-600 text-base mx-4 mt-7>

@@ -23,7 +23,7 @@ const chunkSize = computed(() =>
 const slides = computed(() => chunk(buildedSlides, chunkSize.value));
 </script>
 <template>
-  <div class="w-our-services" bg-black overflow-hidden>
+  <div class="w-our-services" overflow-hidden>
     <SStructure py-4rem>
       <SPrettyHeader w-fit left="5/10" translate-x="-5/10">
         {{ $t('services.header') }}

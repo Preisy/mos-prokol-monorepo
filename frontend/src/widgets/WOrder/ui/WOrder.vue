@@ -4,7 +4,7 @@ import OrderForm from './OrderForm.vue';
 </script>
 
 <template>
-  <div class="w-order" bg-black relative overflow-hidden>
+  <div class="w-order" relative overflow-hidden>
     <SStructure relative z-1 pt-3rem pb-1.5rem class="sm:py-22">
       <OrderForm max-w-112></OrderForm>
     </SStructure>

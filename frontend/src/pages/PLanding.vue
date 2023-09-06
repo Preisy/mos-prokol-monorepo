@@ -13,15 +13,17 @@ import { WStats } from 'widgets/WStats';
 </script>
 
 <template>
-  <WHeader></WHeader>
-  <WHome />
-  <WAboutUs></WAboutUs>
-  <WOurServices />
-  <WPrice></WPrice>
-  <WAdvances></WAdvances>
-  <WOrder></WOrder>
-  <WOurWorks></WOurWorks>
-  <WStats />
-  <WStages />
-  <WFooter />
+  <div bg-black>
+    <WHeader></WHeader>
+    <WHome />
+    <WAboutUs></WAboutUs>
+    <WOurServices />
+    <WPrice></WPrice>
+    <WAdvances></WAdvances>
+    <WOrder></WOrder>
+    <WOurWorks></WOurWorks>
+    <WStats />
+    <WStages />
+    <WFooter />
+  </div>
 </template>

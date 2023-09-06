@@ -16,7 +16,8 @@
       translate-x="1/10"
       translate-y="-1.5/10"
       select-none
-      whitespace-nowrap
+      whitespace-break-spaces
+      sm:whitespace-nowrap
       text-outline-attractive2
       class="secondary"
     >

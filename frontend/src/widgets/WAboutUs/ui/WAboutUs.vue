@@ -6,9 +6,11 @@ import { SStructure } from 'shared/ui/SStructure';
 const { tm } = useI18n();
 </script>
 <template>
-  <div class="w-about-us" bg-black overflow-hidden relative mt--16>
+  <div class="w-about-us" overflow-hidden relative mt--16>
     <SStructure pt-4rem pb-1rem relative z-0>
-      <SPrettyHeader>{{ $t('about.header') }}</SPrettyHeader>
+      <SPrettyHeader relative translate-x="-1/1" left="[calc(100%-1rem)]">
+        {{ $t('about.header') }}
+      </SPrettyHeader>
       <div w-full class="2xl:w-7.5/10" text-white font-600 text-md>
         <div v-for="(line, lineIndex) of tm('about.desc')" :key="lineIndex">
           <p

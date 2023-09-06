@@ -21,7 +21,17 @@ defineProps<AdvanceCardProps>();
       <span class="sm:(ml-4 mt-4)" ml-3 mt-2 z-1 relative block>{{
         subText
       }}</span>
-      <div bg-attractive rounded-1 h-6 w-37 absolute top-0 left-0 z-0 />
+      <div
+        bg-attractive
+        rounded-1
+        h-4.8
+        sm:h-6
+        w-37
+        absolute
+        top-0
+        left-0
+        z-0
+      />
     </div>
   </div>
 </template>

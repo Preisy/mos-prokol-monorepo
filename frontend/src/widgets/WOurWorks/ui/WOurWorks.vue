@@ -16,8 +16,8 @@ const slides = computed(() =>
 </script>
 
 <template>
-  <div class="w-our-works" bg-black overflow-hidden>
-    <SStructure py-2.5rem pb-4rem class="sm:(py-4rem pb-8rem)" relative>
+  <div class="w-our-works" overflow-hidden>
+    <SStructure py-1.5rem pb-4rem class="sm:(py-4rem pb-8rem)" relative>
       <div text-center>
         <SPrettyHeader w-fit block class="header">
           {{ $t('ourWorks.header') }}
@@ -34,7 +34,8 @@ const slides = computed(() =>
       <q-img
         src="/widgets/WOurWorks/arrow.png"
         absolute
-        bottom-6
+        bottom-3.6
+        sm:bottom-6
         right-0
         sm:right--10
         w-30

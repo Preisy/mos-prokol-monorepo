@@ -13,6 +13,6 @@ export default {
     btn: 'Написать в whatsapp',
     addressTitle: 'Адрес',
     address: 'г. Москва',
-    copyright: 'Copyright © Название 2023',
+    copyright: 'Copyright © МОС Прокол 2023',
   },
 };

@@ -11,6 +11,8 @@ defineEmits<{
   (event: 'update:currentIndex', val: number): void;
 }>();
 
+const q = useQuasar();
+const isMobile = computed(() => q.screen.lt.sm);
 const textId =
   props.id.toString().length > 1 ? `0${props.id}.` : `${props.id}.`;
 </script>
@@ -33,10 +35,10 @@ const textId =
     border-0
     class="card"
     :class="{
-      'rounded-tl-0.6rem': first,
-      'rounded-bl-0.6rem': last,
-      'ml--1rem rounded-l-0.6rem border-attractive2 border-l-6 [&>.index]:text-attractive2 [&>.desc]:text-black':
-        id === currentIndex,
+      first,
+      last,
+      active: id === currentIndex,
+      mobile: isMobile,
     }"
     @click="$emit('update:currentIndex', id)"
   >
@@ -70,5 +72,29 @@ const textId =
   transition-delay: 0ms;
   transition-duration: 300ms;
   transition-property: border, border-radius, margin, width;
+
+  --border-radius: 0.6rem;
+  --border-width: 6px;
+  --margin-left: -1rem;
+  &.mobile{
+    --border-radius: 0.4rem;
+    --border-width: 3px;
+    --margin-left: -0.6rem;
+  }
+
+  &.first {
+    border-top-left-radius: var(--border-radius);
+  }
+  &.last {
+    border-bottom-left-radius: var(--border-radius);
+  }
+  &.active {
+    margin-left: var(--margin-left);
+    border-width: 0;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-left-width: var(--border-width);
+    --uno: border-attractive2 [&>.index]:text-attractive2 [&>.desc]:text-black;
+  }
 }
 </style>

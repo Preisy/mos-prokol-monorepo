@@ -12,7 +12,7 @@ const fields = fieldsSchema(t);
   <div class="sm:(px-12 py-8)" p-7 bg-primary rounded-4 relative>
     <div class="sm:text-24px" text-18px font-800 line-height-5.72 text-center>
       <span text-secondary2>{{ $t('order.desc') + ' ' }}</span> <br />
-      <span text-attractive2>{{ $t('order.highlighted') }}</span>
+      <span italic text-attractive2>{{ $t('order.highlighted') }}</span>
     </div>
     <FForm
       input-classes="text-neutral-5/95"

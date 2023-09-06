@@ -12,8 +12,8 @@ const numbers: PhoneNumber[] = [
 </script>
 
 <template>
-  <div class="w-footer" relative overflow-hidden bg-black>
-    <SStructure w="60/100!" py-18 relative z-1>
+  <div class="w-footer" relative overflow-hidden mt--1rem>
+    <SStructure sm:w="60/100!" py-8.8 pb-12 sm:py-18 relative z-1>
       <div flex flex-col md:flex-row items-center justify-center gap-x-40>
         <FooterLinks></FooterLinks>
         <div mt-4 md:mt-0>
