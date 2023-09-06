@@ -3,21 +3,31 @@ defineProps<{
   name: string;
   imgSrc: string[];
 }>();
+
+defineEmits<{
+  (event: 'imgSelected', imgSrc: string): void;
+}>();
 </script>
 
 <template>
   <q-carousel-slide :name="name">
     <div grid grid-cols-3 grid-rows-2 gap-5>
-      <q-img
+      <div
+        @click="$emit('imgSelected', src)"
         v-for="(src, index) in imgSrc"
         :key="src"
-        :src="src"
         :class="{ 'row-span-2 col-span-2': index === 0 }"
-        loading="eager"
-        rounded-2.4
-        select-none
-        pointer-events-none
-      />
+      >
+        <q-img
+          :src="src"
+          loading="eager"
+          rounded-2.4
+          w-full
+          h-full
+          select-none
+          pointer-events-none
+        />
+      </div>
     </div>
   </q-carousel-slide>
 </template>

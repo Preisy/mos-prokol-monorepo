@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import chunk from 'lodash.chunk';
+import { QDialog } from 'quasar';
 import { SCarousel } from 'shared/ui/SCarousel';
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
@@ -13,6 +14,13 @@ const slides = chunk(
   slidesImages.concat(slidesImages).concat(slidesImages),
   slideSize
 );
+const dialog = ref<InstanceType<typeof QDialog>>();
+const imgSource = ref();
+const onImgSelect = (imgSrc: string) => {
+  if (!dialog.value) return;
+  imgSource.value = imgSrc;
+  dialog.value.show();
+};
 </script>
 
 <template>
@@ -29,8 +37,12 @@ const slides = chunk(
           :key="index"
           :name="index.toString()"
           :img-src="slide"
+          @img-selected="onImgSelect"
         />
       </SCarousel>
+      <q-dialog ref="dialog">
+        <q-img :src="imgSource" />
+      </q-dialog>
       <q-img
         src="/widgets/WOurWorks/arrow.png"
         absolute
