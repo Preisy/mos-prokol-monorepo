@@ -42,6 +42,8 @@ onMounted(
       z--1
       w-auto
       h-full
+      select-none
+      pointer-events-none
       class="2xl:(w-full h-auto)"
     />
   </div>

@@ -34,6 +34,8 @@ const { tm } = useI18n();
           rounded="5/10"
           h-full
           w-auto
+          select-none
+          pointer-events-none
           class="xl:w-full"
         />
       </div>

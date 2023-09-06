@@ -9,8 +9,8 @@ export default {
     },
     errors: {
       telephoneRegexp: 'Wrong number',
-      questionShort: 'Not enough',
-      questionLong: 'Text overflow',
+      questionShort: 'Minumum question size = 6',
+      questionLong: 'Max question size = 2000',
     },
   },
 };

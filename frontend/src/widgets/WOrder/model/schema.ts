@@ -19,7 +19,7 @@ export const fieldsSchema = (t: ComposerTranslation): FieldSchema[] => {
       title: 'Ваш вопрос',
       rule: z
         .string()
-        .min(20, t('order.errors.questionShort'))
+        .min(6, t('order.errors.questionShort'))
         .max(2000, t('order.errors.questionLong')),
       sInputOptions: { type: 'textarea' },
     },
