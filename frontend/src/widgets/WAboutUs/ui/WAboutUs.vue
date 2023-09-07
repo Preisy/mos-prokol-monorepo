@@ -8,7 +8,13 @@ const { tm } = useI18n();
 <template>
   <div class="w-about-us" overflow-hidden relative mt--16>
     <SStructure pt-4rem pb-1rem relative z-0>
-      <SPrettyHeader relative translate-x="-1/1" left="[calc(100%-2rem)]">
+      <SPrettyHeader
+        relative
+        translate-x="-1/1"
+        sm:translate-x-none
+        left="[calc(100%-2rem)]"
+        sm:left-auto
+      >
         {{ $t('about.header') }}
       </SPrettyHeader>
       <div w-full class="2xl:w-7.5/10" text-white font-600 text-md>
@@ -22,26 +28,31 @@ const { tm } = useI18n();
       </div>
       <div
         absolute
-        rounded="5/10"
         translate-x="4/10"
         top-0
         right-0
         z--1
-        h="11/10"
-        class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left)"
+        h-full
+        class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left) bg-wrapper"
       >
         <img
           src="/widgets/WAboutUs/background.png"
           z-0
           brightness-70
-          rounded="5/10"
           h-full
           w-auto
           select-none
           pointer-events-none
-          class="xl:w-full"
+          class="xl:w-full bg-img"
         />
       </div>
     </SStructure>
   </div>
 </template>
+
+<style scoped lang="scss">
+.bg-wrapper {
+  mask-image: url('/widgets/WAboutUs/bg-mask.png');
+  mask-repeat: no-repeat;
+}
+</style>
