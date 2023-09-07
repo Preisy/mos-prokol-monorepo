@@ -11,7 +11,7 @@ defineEmits<{
 
 <template>
   <q-carousel-slide :name="name">
-    <div grid grid-cols-3 grid-rows-2 gap-5>
+    <div grid grid-cols-1 grid-rows-1 sm:grid-cols-3 sm:grid-rows-2 gap-5>
       <div
         @click="$emit('imgSelected', src)"
         v-for="(src, index) in imgSrc"

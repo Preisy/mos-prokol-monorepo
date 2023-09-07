@@ -13,8 +13,10 @@ defineEmits<{
     <div
       v-for="index in count"
       :key="index"
-      w-3.2
-      h-3.2
+      w-2
+      h-2
+      sm:w-3.2
+      sm:h-3.2
       cursor-pointer
       rounded="1/1"
       bg-neutral-6

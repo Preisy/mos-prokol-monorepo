@@ -26,7 +26,13 @@ onMounted(
         </HomeChip>
       </div>
       <div text-center>
-        <span uppercase text-primary text-xl font-700>
+        <span
+          uppercase
+          text-primary
+          text-xl
+          font-700
+          :class="{ 'line-height-[1.3]': $q.screen.lt.sm }"
+        >
           {{ $t('home.title') }}
         </span>
       </div>

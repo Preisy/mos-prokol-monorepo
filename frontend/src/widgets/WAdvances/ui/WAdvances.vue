@@ -8,10 +8,18 @@ const { tm } = useI18n();
 </script>
 
 <template>
-  <div class="w-advances" bg-black overflow-hidden>
+  <div class="w-advances" overflow-hidden>
     <SStructure py-8>
       <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
-      <div flex flex-row justify-center gap-x-9.6>
+      <div
+        flex
+        flex-col
+        items-center
+        md:flex-row
+        justify-center
+        gap-x-9.6
+        gap-y-4
+      >
         <AdvanceCard
           max-w-72
           v-for="(card, index) of tm('advances.cards')"

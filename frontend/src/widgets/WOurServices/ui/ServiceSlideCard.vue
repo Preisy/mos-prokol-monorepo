@@ -5,10 +5,13 @@ export interface WServiceSlideCardProps {
 }
 
 defineProps<WServiceSlideCardProps>();
+defineEmits<{
+  (event: 'imgSelected', imgSrc: string): void;
+}>();
 </script>
 
 <template>
-  <div class="card" relative h-50 flex-1>
+  <div class="card" relative h-50 flex-1 @click="$emit('imgSelected', imgSrc)">
     <div
       class="after-(block absolute w-full h-full top-0 left-0 bg-gradient-shadow content-empty)"
       rounded-2
@@ -16,7 +19,7 @@ defineProps<WServiceSlideCardProps>();
       text-0
       h-full
     >
-      <img :src="imgSrc" w-full relative h-auto />
+      <q-img :src="imgSrc" :draggable="false" w-full relative h-auto />
     </div>
     <p absolute bottom-1 left-3.4 text-base text-primary font-700>{{ text }}</p>
   </div>

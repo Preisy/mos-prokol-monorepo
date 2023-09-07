@@ -5,6 +5,6 @@ export default {
     btn: 'Send message in whatsapp',
     addressTitle: 'Address',
     address: 'Moscow',
-    copyright: 'Copyright © Название 2023',
+    copyright: 'Copyright © MOS Prokol 2023',
   },
 };

@@ -16,6 +16,7 @@ export type FieldsSchema = FieldSchema[];
 
 const props = defineProps<{
   fields: FieldSchema[];
+  inputClasses?: string;
 }>();
 
 const validationSchema = toTypedSchema(
@@ -49,6 +50,8 @@ const onSubmit = handleSubmit((values) => {
         mb-2
       >
         <SInput
+          class="f-form_input"
+          :input-class="inputClasses"
           :name="name"
           :title="title"
           v-bind="sInputOptions"
@@ -57,7 +60,7 @@ const onSubmit = handleSubmit((values) => {
       </div>
     </div>
     <div text-center>
-      <SBtn type="submit">{{ $t('order.button') }}</SBtn>
+      <SBtn class="f-form_btn" type="submit">{{ $t('order.button') }}</SBtn>
     </div>
   </form>
 </template>
