@@ -8,7 +8,7 @@ const { tm } = useI18n();
 <template>
   <div class="w-about-us" overflow-hidden relative mt--16>
     <SStructure pt-4rem pb-1rem relative z-0>
-      <SPrettyHeader relative translate-x="-1/1" left="[calc(100%-1rem)]">
+      <SPrettyHeader relative translate-x="-1/1" left="[calc(100%-2rem)]">
         {{ $t('about.header') }}
       </SPrettyHeader>
       <div w-full class="2xl:w-7.5/10" text-white font-600 text-md>
