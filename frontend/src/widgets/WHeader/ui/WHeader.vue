@@ -11,7 +11,17 @@ const numbers: PhoneNumber[] = [
 
 <template>
   <q-header class="w-header" bg-unset fixed>
-    <SStructure py-5.8 pt-4 flex flex-row justify-between items-center>
+    <SStructure
+      py-5.8
+      pt-4
+      md:w-auto
+      md:ml-6rem
+      md:mr-5rem
+      flex
+      flex-row
+      justify-between
+      items-center
+    >
       <SLogo w-16.4 class="2xl:w-24" />
       <SPhoneNumber :numbers="numbers" />
     </SStructure>

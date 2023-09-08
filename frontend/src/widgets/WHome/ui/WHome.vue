@@ -19,9 +19,9 @@ onMounted(
 
 <template>
   <div class="w-home" overflow-hidden relative z-1>
-    <SStructure py-70 pb-6rem>
-      <div flex flex-row justify-end>
-        <HomeChip v-for="card in tm('home.cards')" :key="card">
+    <SStructure pt-22rem pb-6rem>
+      <div flex flex-row justify-end mr-4.4rem>
+        <HomeChip v-for="card in tm('home.cards')" :key="card" rounded-0.5rem>
           {{ card }}
         </HomeChip>
       </div>
@@ -29,7 +29,7 @@ onMounted(
         <span
           uppercase
           text-primary
-          text-xl
+          text-xll
           font-700
           :class="{ 'line-height-[1.3]': $q.screen.lt.sm }"
         >
@@ -37,7 +37,9 @@ onMounted(
         </span>
       </div>
       <div text-center mt-4>
-        <SBtn @click="onclick">{{ $t('home.btn') }}</SBtn>
+        <SBtn @click="onclick" btn-classes="px-6rem!">
+          {{ $t('home.btn') }}
+        </SBtn>
       </div>
     </SStructure>
 
@@ -50,7 +52,7 @@ onMounted(
       h-full
       select-none
       pointer-events-none
-      class="2xl:(w-full h-auto)"
+      class="3xl:(w-full h-auto)"
     />
   </div>
 </template>

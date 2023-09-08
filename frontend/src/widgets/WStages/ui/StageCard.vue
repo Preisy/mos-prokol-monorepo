@@ -44,7 +44,7 @@ const textId =
   >
     <div
       class="index"
-      text-xl
+      text-xls
       line-height-none
       font-700
       mr-2

@@ -15,18 +15,18 @@ const fields = fieldsSchema(t);
       <span italic text-attractive2>{{ $t('order.highlighted') }}</span>
     </div>
     <FForm
-      input-classes="text-neutral-5/95"
+      input-classes="text-neutral-5/95 pt-6px!"
       :fields="fields"
       class="order-form"
     />
     <SArrow
       absolute
-      w-5rem
-      sm:w-6.5rem
+      w-6.5rem
       bottom-0
       left="5/10"
       z-2
-      translate-y="4.5/10"
+      translate-y="5.3/10"
+      class="md-(translate-y--47% rotate-290deg right--2.8rem left-auto w-8.5rem)"
     />
   </div>
 </template>

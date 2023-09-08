@@ -27,7 +27,7 @@ const onImgSelect = (imgSrc: string) => {
   <div class="w-our-works" overflow-hidden>
     <SStructure py-1.5rem pb-4rem class="sm:(py-4rem pb-8rem)" relative>
       <div text-center>
-        <SPrettyHeader w-fit block class="header">
+        <SPrettyHeader w-fit block class="header [&>h1]:m-0">
           {{ $t('ourWorks.header') }}
         </SPrettyHeader>
       </div>

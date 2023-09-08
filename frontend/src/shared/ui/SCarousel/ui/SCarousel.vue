@@ -28,7 +28,7 @@ onMounted(() => {
       transition-next="slide-left"
       animated
       swipeable
-      w="9/10"
+      w-full
       mx-auto
       h-auto
       bg-unset
@@ -45,11 +45,9 @@ onMounted(() => {
 
     <div
       v-if="length > 1"
-      class="controls"
+      class="controls top-[calc(50%-0.5rem)]"
       w="11/10"
       left="-5/100"
-      sm:w-full
-      sm:left-0
       flex
       flex-row
       justify-between
@@ -57,14 +55,13 @@ onMounted(() => {
       text-base
       absolute
       z-0
-      top="5/10"
       translate-y="-5/10"
     >
       <CarouselControlBtn @click="carousel?.previous()">
-        <q-icon name="chevron_left" />
+        <q-icon name="chevron_left" size="2rem" />
       </CarouselControlBtn>
       <CarouselControlBtn @click="carousel?.next()">
-        <q-icon name="chevron_right" />
+        <q-icon name="chevron_right" size="2rem" />
       </CarouselControlBtn>
     </div>
   </div>

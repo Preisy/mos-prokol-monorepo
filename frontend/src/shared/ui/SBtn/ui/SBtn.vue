@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { QBtnProps } from 'quasar';
 
-interface SBtnProps extends QBtnProps {}
+interface SBtnProps extends QBtnProps {
+  btnClasses?: string;
+}
 defineProps<SBtnProps>();
 </script>
 
@@ -50,6 +52,7 @@ defineProps<SBtnProps>();
         px-16
         py-4
         text-btn-text-color
+        :class="btnClasses"
         class="s-btn_btn"
       >
         <slot></slot>

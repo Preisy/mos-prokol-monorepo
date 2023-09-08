@@ -9,7 +9,7 @@
       font-700
       blur-1
       text-2xl
-      text-black
+      text-secondary5
       absolute
       top-0
       left-0

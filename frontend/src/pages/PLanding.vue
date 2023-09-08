@@ -13,7 +13,7 @@ import { WStats } from 'widgets/WStats';
 </script>
 
 <template>
-  <div bg-black>
+  <div bg-secondary5>
     <WHeader></WHeader>
     <WHome />
     <WAboutUs></WAboutUs>

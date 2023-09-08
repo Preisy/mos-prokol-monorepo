@@ -25,6 +25,7 @@ export default defineConfig<Theme>({
       secondary2: '#3A3A3A',
       secondary3: '#C9C9C9',
       secondary4: '#313131',
+      secondary5: '#111010',
       attractive: '#FCE078',
       attractive2: '#ffd743',
       btnTextColor: '#574c1f',
@@ -39,7 +40,8 @@ export default defineConfig<Theme>({
       mds: ['1rem', '1.4'],
       lgs: ['1.2rem', '1'],
       lgx: ['1.2rem', '1'],
-      xl: ['2.5rem', '1.4'],
+      xls: ['2.65rem', '1.4'],
+      xll: ['2.3rem', '1.4'],
       '2xl': ['3rem', '1.4'],
     },
     breakpoints: {
@@ -62,7 +64,8 @@ export default defineConfig<Theme>({
           md: '0.7rem',
           lgs: '0.6rem',
           lgx: '0.7rem',
-          xl: '1.2rem',
+          xls: '0.8rem',
+          xll: '1.2rem',
           '2xl': '1.3rem',
         } as const;
 
