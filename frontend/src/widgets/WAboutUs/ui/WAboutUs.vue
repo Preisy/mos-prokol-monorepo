@@ -28,7 +28,8 @@ const { tm } = useI18n();
       </div>
       <div
         absolute
-        translate-x="4/10"
+        translate-x="7.5/10"
+        sm:translate-x="4/10"
         top-0
         right-0
         z--1

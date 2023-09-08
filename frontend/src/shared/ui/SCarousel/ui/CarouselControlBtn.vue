@@ -6,7 +6,7 @@ defineProps<Props>();
 </script>
 <template>
   <q-btn
-    class="[&>.q-focus-helper]:display-none before-display-none"
+    class="[&>.q-focus-helper]:display-none before-display-none top-[calc(50%)]"
     hover="scale-110"
     w-9.6
     h-9.6

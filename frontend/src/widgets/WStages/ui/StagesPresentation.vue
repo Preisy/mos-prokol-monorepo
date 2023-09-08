@@ -32,7 +32,7 @@ watch(currentActive, () => {
 </script>
 
 <template>
-  <div grid grid-cols-34 w-fit mx-auto justify-center relative>
+  <div grid grid-cols-34 sm:grid-cols-2 w-fit mx-auto justify-center relative>
     <div
       ref="cardsRef"
       class="cards"
@@ -40,6 +40,8 @@ watch(currentActive, () => {
       h-min
       grid-col-start-1
       grid-col-end-20
+      sm:grid-col-start-auto
+      sm:grid-col-end-auto
     >
       <StageCard
         v-for="(stage, index) in stagesTextes"
@@ -56,6 +58,8 @@ watch(currentActive, () => {
       w-full
       grid-col-start-20
       grid-col-end-35
+      sm:grid-col-start-auto
+      sm:grid-col-end-auto
       class="display"
       :style="{ height: stageDisplayheight }"
     >

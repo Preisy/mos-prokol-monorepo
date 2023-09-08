@@ -45,6 +45,8 @@ onMounted(
 
     <img
       src="/widgets/WHome/background.png"
+      translate-x="-30%"
+      sm:translate-x-none
       absolute
       top-0
       z--1

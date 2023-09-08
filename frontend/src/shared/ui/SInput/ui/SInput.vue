@@ -5,6 +5,7 @@ import { useField } from 'vee-validate';
 export interface SInputProps extends Omit<QInputProps, 'modelValue'> {
   title: string;
   name: string;
+  placeholder?: string;
 }
 const props = defineProps<SInputProps>();
 

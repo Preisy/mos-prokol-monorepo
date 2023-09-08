@@ -90,11 +90,10 @@ const textId =
   }
   &.active {
     margin-left: var(--margin-left);
-    border-width: 0;
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
     border-left-width: var(--border-width);
-    --uno: border-attractive2 [&>.index]:text-attractive2 [&>.desc]:text-black;
+    --uno: border-l-attractive2 [&>.index]:text-attractive2 [&>.desc]:text-black;
   }
 }
 </style>

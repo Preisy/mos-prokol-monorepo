@@ -43,26 +43,27 @@ onMounted(() => {
       <CarouselDownControls :count="length" v-model:current="slide" />
     </div>
 
-    <div
+    <CarouselControlBtn
       v-if="length > 1"
-      class="controls top-[calc(50%-0.5rem)]"
-      w="11/10"
-      left="-5/100"
-      flex
-      flex-row
-      justify-between
+      @click="carousel?.previous()"
       text-attractive2
-      text-base
       absolute
-      z-0
+      z-1
       translate-y="-5/10"
+      left--1.5rem
     >
-      <CarouselControlBtn @click="carousel?.previous()">
-        <q-icon name="chevron_left" size="2rem" />
-      </CarouselControlBtn>
-      <CarouselControlBtn @click="carousel?.next()">
-        <q-icon name="chevron_right" size="2rem" />
-      </CarouselControlBtn>
-    </div>
+      <q-icon name="chevron_left" size="2rem" />
+    </CarouselControlBtn>
+    <CarouselControlBtn
+      v-if="length > 1"
+      @click="carousel?.next()"
+      text-attractive2
+      absolute
+      z-1
+      translate-y="-5/10"
+      right--1.5rem
+    >
+      <q-icon name="chevron_right" size="2rem" />
+    </CarouselControlBtn>
   </div>
 </template>

@@ -12,7 +12,10 @@ export const fieldsSchema = (t: ComposerTranslation): FieldSchema[] => {
       name: 'telephone',
       title: 'Телефон',
       rule: z.string().regex(phoneRegex, t('order.errors.telephoneRegexp')),
-      sInputOptions: { mask: '# (###) ###-##-##' },
+      sInputOptions: {
+        mask: '# (###) ###-##-##',
+        placeholder: '8 (987) 654-32-10',
+      },
     },
     {
       name: 'question',
