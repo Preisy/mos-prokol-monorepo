@@ -5,15 +5,28 @@ import { SCarousel } from 'shared/ui/SCarousel';
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
 import OurWorksSlide from './OurWorksSlide.vue';
+import VideoSlide from './VideoSlide.vue';
+
+interface Slide {
+  type: 'photos' | 'video';
+  src: string;
+}
 
 const q = useQuasar();
 const slideSize = computed(() => (q.screen.lt.sm ? 1 : 3));
-const slidesImages = [...Array(3).keys()].map(
-  (serialNumber) => `widgets/WOurWorks/${serialNumber}.png`
-);
-const slides = computed(() =>
-  chunk(slidesImages.concat(slidesImages).concat(slidesImages), slideSize.value)
-);
+const slidesImages: Slide[] = [...Array(6).keys()].map((serialNumber) => ({
+  type: 'photos',
+  src: `widgets/WOurWorks/${serialNumber}.png`,
+}));
+
+const slides = computed<Slide[][]>(() => chunk(slidesImages, slideSize.value));
+slides.value.push([
+  {
+    type: 'video',
+    src: 'https://www.youtube.com/embed/nfmUAPOl3FU?si=-bcwb_zNvj1db1Lh',
+  },
+]);
+
 const dialog = ref<InstanceType<typeof QDialog>>();
 const imgSource = ref();
 const onImgSelect = (imgSrc: string) => {
@@ -33,13 +46,19 @@ const onImgSelect = (imgSrc: string) => {
       </div>
 
       <SCarousel need-down-controls :infinite="true" :length="slides.length">
-        <OurWorksSlide
-          v-for="(slide, index) in slides"
-          :key="index"
-          :name="index.toString()"
-          :img-src="slide"
-          @img-selected="onImgSelect"
-        />
+        <template v-for="(slide, index) in slides" :key="index">
+          <OurWorksSlide
+            v-if="slide.length > 1"
+            :name="index.toString()"
+            :img-src="slide.map((item) => item.src)"
+            @img-selected="onImgSelect"
+          />
+          <VideoSlide
+            v-if="slide.length === 1"
+            :name="index.toString()"
+            :url="slide[0].src"
+          />
+        </template>
       </SCarousel>
 
       <q-dialog ref="dialog">
