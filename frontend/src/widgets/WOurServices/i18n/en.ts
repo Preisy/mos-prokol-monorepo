@@ -6,6 +6,7 @@ export default {
         'Trenchless water pipe laying',
         'Trenchless gas pipeline laying',
         'Installation of wells',
+        'Welding HDPE pipe',
       ],
     ],
   },

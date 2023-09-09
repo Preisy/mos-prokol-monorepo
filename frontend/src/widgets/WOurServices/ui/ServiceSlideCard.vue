@@ -11,11 +11,17 @@ defineEmits<{
 </script>
 
 <template>
-  <div class="card" relative h-50 flex-1 @click="$emit('imgSelected', imgSrc)">
+  <div
+    class="card"
+    relative
+    h-50
+    flex-1
+    rounded-2
+    overflow-hidden
+    @click="$emit('imgSelected', imgSrc)"
+  >
     <div
       class="after-(block absolute w-full h-full top-0 left-0 bg-gradient-shadow content-empty)"
-      rounded-2
-      overflow-hidden
       text-0
       h-full
     >

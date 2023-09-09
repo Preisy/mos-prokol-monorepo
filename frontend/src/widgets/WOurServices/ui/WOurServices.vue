@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { chunk } from 'lodash';
+// import { chunk } from 'lodash';
 import { QDialog } from 'quasar';
 import { useI18n } from 'vue-i18n';
-import { SCarousel } from 'shared/ui/SCarousel';
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
+import { SSlider } from 'shared/ui/SSlider';
 import { SStructure } from 'shared/ui/SStructure';
-import ServiceSlide from './ServiceSlide.vue';
+// import ServiceSlide from './ServiceSlide.vue';
 import ServiceSlideCard from './ServiceSlideCard.vue';
 
 const { tm } = useI18n();
@@ -18,10 +18,10 @@ const buildedSlides = (tm('services.slides') as string[]).map(
   })
 );
 
-const chunkSize = computed(() =>
+const sliderParts = computed(() =>
   !q.screen.lt.lg ? 3 : !q.screen.lt.md ? 2 : 1
 );
-const slides = computed(() => chunk(buildedSlides, chunkSize.value));
+// const slides = computed(() => chunk(buildedSlides, chunkSize.value));
 
 const dialog = ref<InstanceType<typeof QDialog>>();
 const imgSource = ref();
@@ -38,20 +38,18 @@ const onImgSelect = (imgSrc: string) => {
         {{ $t('services.header') }}
       </SPrettyHeader>
 
-      <SCarousel :length="slides.length" infinite>
-        <ServiceSlide
-          v-for="(slide, index) in slides"
-          :key="index"
-          :name="index.toString()"
-        >
-          <ServiceSlideCard
-            v-for="(card, cardIndex) in slide"
-            :key="cardIndex"
-            v-bind="card"
-            @img-selected="onImgSelect"
-          />
-        </ServiceSlide>
-      </SCarousel>
+      <SSlider
+        min-h-12.5rem
+        :length="buildedSlides.length"
+        :parts="sliderParts"
+      >
+        <ServiceSlideCard
+          v-for="(card, cardIndex) in buildedSlides"
+          :key="cardIndex"
+          v-bind="card"
+          @img-selected="onImgSelect"
+        />
+      </SSlider>
 
       <q-dialog ref="dialog" full-height>
         <q-img :src="imgSource" fit="contain" overflow="hidden!" />
