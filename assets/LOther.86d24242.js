@@ -1,0 +1,1 @@
+import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";import{t as e,u as c,y as o,H as _}from"./index.1d501078.js";const a={};function s(r,t){return e(),c("div",null,"Wrong page")}var p=n(a,[["render",s]]);const i=o({__name:"LOther",setup(r){return(t,f)=>(e(),_(p))}});export{i as default};
