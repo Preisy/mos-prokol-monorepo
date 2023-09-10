@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { QCarousel, QCarouselProps } from 'quasar';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import CarouselControlBtn from './CarouselControlBtn.vue';
 import CarouselDownControls from './CarouselDownControls.vue';
 
@@ -16,6 +16,13 @@ onMounted(() => {
   for (let i = 0; i < props.length; i++)
     setTimeout(() => carousel.value?.next(), 0);
 });
+
+watch(
+  () => props.length,
+  () => {
+    if (parseInt(slide.value) >= props.length) slide.value = '0';
+  }
+);
 </script>
 
 <template>

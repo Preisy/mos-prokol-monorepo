@@ -34,7 +34,7 @@ const { tm } = useI18n();
         right-0
         z--1
         h-full
-        class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left) bg-wrapper"
+        class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left) bg-wrapper 4xl:translate-x-49.7%"
       >
         <img
           src="/widgets/WAboutUs/background.png"

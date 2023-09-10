@@ -18,7 +18,7 @@ onMounted(
 </script>
 
 <template>
-  <div class="w-home" overflow-hidden relative z-1 mt-3rem>
+  <div class="w-home" overflow-hidden relative z-1 mt-4rem>
     <SStructure pt-22rem pb-6rem>
       <div
         flex

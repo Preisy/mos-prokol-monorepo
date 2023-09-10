@@ -20,7 +20,7 @@ const { value, errorMessage } = useField<string | number | undefined>(
       <span>
         {{ title }}
       </span>
-      <span v-if="errorMessage" text-red-5 absolute right-0>{{
+      <span v-if="errorMessage" text-red-5 absolute right-0 bg-white b-rd-6>{{
         errorMessage
       }}</span>
     </div>
