@@ -75,11 +75,17 @@ const onImgSelect = (imgSrc: string) => {
       </SCarousel>
 
       <q-dialog ref="dialog">
-        <q-img :src="imgSource" select-none pointer-events-none />
+        <q-img
+          fit="contain"
+          :src="imgSource"
+          select-none
+          pointer-events-none
+          overflow="hidden!"
+        />
       </q-dialog>
 
       <q-img
-        src="/widgets/WOurWorks/arrow.png"
+        src="/mos-prokol-monorepo/widgets/WOurWorks/arrow.png"
         absolute
         bottom-3.6
         sm:bottom-6

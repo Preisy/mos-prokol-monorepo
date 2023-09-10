@@ -98,6 +98,8 @@ module.exports = configure(function (/* ctx */) {
         shared: path.join(__dirname, 'src/shared'),
       },
 
+      publicPath:'/mos-prokol-monorepo'
+
       // env: useEnv(),
     },
 

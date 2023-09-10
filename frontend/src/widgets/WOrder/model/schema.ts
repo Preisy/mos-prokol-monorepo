@@ -9,6 +9,17 @@ const phoneRegex = new RegExp(
 export const fieldsSchema = (t: ComposerTranslation): FieldSchema[] => {
   return [
     {
+      name: 'username',
+      title: 'Ваше имя',
+      rule: z
+        .string()
+        .min(2, t('order.errors.nameShort'))
+        .max(30, t('order.errors.nameLong')),
+      sInputOptions: {
+        placeholder: 'Иван',
+      },
+    },
+    {
       name: 'telephone',
       title: 'Телефон',
       rule: z.string().regex(phoneRegex, t('order.errors.telephoneRegexp')),

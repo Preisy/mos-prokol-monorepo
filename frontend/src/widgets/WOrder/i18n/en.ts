@@ -9,8 +9,10 @@ export default {
     },
     errors: {
       telephoneRegexp: 'Wrong number',
-      questionShort: 'Minumum question size = 6',
-      questionLong: 'Max question size = 2000',
+      questionShort: 'Minumum - 6',
+      questionLong: 'Maximum - 2000',
+      nameShort: 'Minimum - 2',
+      nameLong: 'Maximum - 30',
     },
   },
 };
