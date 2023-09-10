@@ -3,9 +3,9 @@ export default {
     header: 'our services',
     slides: [
       [
-        'Trenchless water pipe laying',
+        'Digging pits',
         'Trenchless gas pipeline laying',
-        'Installation of wells',
+        'Locator service (search for underground cables)',
         'Welding HDPE pipe',
       ],
     ],
