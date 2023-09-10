@@ -14,7 +14,7 @@ defineProps<{
   <div text-base flex items-start>
     <!-- <q-icon name="call" inline-block mr-1 /> -->
     <img
-      src="/shared/SPhoneNumber/phone.svg"
+      src="/mos-prokol-monorepo/shared/SPhoneNumber/phone.svg"
       h-14px
       sm:h-16px
       md:h-20px

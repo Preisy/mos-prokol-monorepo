@@ -53,7 +53,7 @@ const brDelta = computed(() =>
         class="2sm:left-6/10 md:left-5/10"
       >
         <img
-          src="/widgets/WStats/background2.png"
+          src="/mos-prokol-monorepo/widgets/WStats/background2.png"
           h-full
           select-none
           pointer-events-none

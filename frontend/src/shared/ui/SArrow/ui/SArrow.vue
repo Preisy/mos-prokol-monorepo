@@ -1,5 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <q-img src="/shared/SArrow/arrow.svg" select-none pointer-events-none />
+  <q-img
+    src="/mos-prokol-monorepo/shared/SArrow/arrow.svg"
+    select-none
+    pointer-events-none
+  />
 </template>

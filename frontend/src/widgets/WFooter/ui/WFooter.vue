@@ -74,7 +74,7 @@ onMounted(
       <span>{{ $t('footer.copyright') }}</span>
     </div>
     <img
-      src="/widgets/WFooter/background.png"
+      src="/mos-prokol-monorepo/widgets/WFooter/background.png"
       absolute
       w-auto
       md:w-full

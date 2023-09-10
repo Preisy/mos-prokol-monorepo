@@ -14,7 +14,7 @@ const q = useQuasar();
 const buildedSlides = (tm('services.slides') as string[]).map(
   (cardText, cardIndex) => ({
     text: cardText,
-    imgSrc: `/widgets/WOurServices/${cardIndex}.png`,
+    imgSrc: `widgets/WOurServices/${cardIndex}.png`,
   })
 );
 
