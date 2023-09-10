@@ -18,7 +18,7 @@ if ((links as Array<string>).length !== linksSelectors.length)
 </script>
 
 <template>
-  <div flex flex-col gap-y-4 items-center md:items-start>
+  <div flex flex-col gap-y-4.4 items-center md:items-start>
     <SNavLink
       v-for="(link, index) in links"
       :key="link"

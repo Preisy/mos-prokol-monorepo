@@ -7,7 +7,7 @@
     </h1>
     <h1
       font-700
-      blur-1
+      blur-1.5
       text-2xl
       text-secondary5
       absolute
@@ -16,9 +16,11 @@
       translate-x="1/10"
       translate-y="-1.5/10"
       select-none
+      pointer-events-none
       whitespace-break-spaces
       sm:whitespace-nowrap
       text-outline-attractive2
+      opacity-60
       class="secondary"
     >
       <slot></slot>

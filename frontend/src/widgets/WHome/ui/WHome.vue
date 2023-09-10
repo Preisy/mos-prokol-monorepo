@@ -18,9 +18,15 @@ onMounted(
 </script>
 
 <template>
-  <div class="w-home" overflow-hidden relative z-1>
+  <div class="w-home" overflow-hidden relative z-1 mt-3rem>
     <SStructure pt-22rem pb-6rem>
-      <div flex flex-row justify-end mr-4.4rem>
+      <div
+        flex
+        flex-row
+        justify-between
+        mx-2rem
+        class="sm:(justify-end ml-0) 2sm:mr-4.4rem"
+      >
         <HomeChip v-for="card in tm('home.cards')" :key="card" rounded-0.5rem>
           {{ card }}
         </HomeChip>
@@ -37,7 +43,7 @@ onMounted(
         </span>
       </div>
       <div text-center mt-4>
-        <SBtn @click="onclick" btn-classes="px-6rem!">
+        <SBtn @click="onclick" btn-classes="sm:px-6rem!">
           {{ $t('home.btn') }}
         </SBtn>
       </div>
@@ -54,7 +60,7 @@ onMounted(
       h-full
       select-none
       pointer-events-none
-      class="3xl:(w-full h-auto)"
+      class="3xl:(w-full h-auto) 4xl:(w-1920px h-full left-50% translate-x--50%)"
     />
   </div>
 </template>

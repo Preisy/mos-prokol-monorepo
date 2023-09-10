@@ -25,7 +25,15 @@ defineEmits<{
       text-0
       h-full
     >
-      <q-img :src="imgSrc" :draggable="false" w-full relative h-auto />
+      <q-img
+        :src="imgSrc"
+        :draggable="false"
+        select-none
+        pointer-events-none
+        w-full
+        relative
+        h-auto
+      />
     </div>
     <p absolute bottom-1 left-3.4 text-base text-primary font-700>{{ text }}</p>
   </div>

@@ -9,8 +9,8 @@ export default {
     },
     errors: {
       telephoneRegexp: 'Неверный номер',
-      questionShort: 'Слишком мало, минимум - 6',
-      questionLong: 'Слишком много, максимум - 2000',
+      questionShort: 'Минимум - 6 символов',
+      questionLong: 'Максимум - 256 символов',
     },
   },
 };

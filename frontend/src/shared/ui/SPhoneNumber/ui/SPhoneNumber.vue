@@ -2,6 +2,7 @@
 export interface PhoneNumber {
   grayPart: string;
   whitePart: string;
+  href: string;
 }
 
 defineProps<{
@@ -21,10 +22,15 @@ defineProps<{
       mr-1
     />
     <div flex flex-col>
-      <div v-for="number in numbers" :key="number.grayPart + number.whitePart">
+      <a
+        v-for="number in numbers"
+        :key="number.grayPart + number.whitePart"
+        :href="number.href"
+        decoration-none
+      >
         <span text-gray font-500> {{ number.grayPart }}</span>
         <span text-white font-700>{{ number.whitePart }}</span>
-      </div>
+      </a>
     </div>
   </div>
 </template>

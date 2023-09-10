@@ -10,7 +10,7 @@ export default {
       'Этапы работ',
     ],
     desc: 'Бестраншейная прокладка труб',
-    btn: 'Написать в whatsapp',
+    btn: 'Отправить заявку',
     addressTitle: 'Адрес',
     address: 'г. Москва',
     copyright: 'Copyright © МОС Прокол 2023',

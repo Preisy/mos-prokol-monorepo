@@ -27,6 +27,7 @@ onMounted(
     font-inter
     cursor-pointer
     select-none
+    pointer-events-none
   >
     <slot></slot>
   </a>

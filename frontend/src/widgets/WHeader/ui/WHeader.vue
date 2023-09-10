@@ -4,8 +4,8 @@ import { SPhoneNumber, PhoneNumber } from 'shared/ui/SPhoneNumber';
 import { SStructure } from 'shared/ui/SStructure';
 
 const numbers: PhoneNumber[] = [
-  { grayPart: '8 (916) ', whitePart: '848-86-23' },
-  { grayPart: '8 (965) ', whitePart: '356-02-49' },
+  { grayPart: '8 (916) ', whitePart: '848-86-23', href: 'tel:89168488623' },
+  { grayPart: '8 (965) ', whitePart: '356-02-49', href: 'tel:89168488623' },
 ];
 </script>
 
@@ -21,6 +21,7 @@ const numbers: PhoneNumber[] = [
       flex-row
       justify-between
       items-center
+      class="4xl:(mx-auto)"
     >
       <SLogo w-16.4 class="2xl:w-24" />
       <SPhoneNumber :numbers="numbers" />

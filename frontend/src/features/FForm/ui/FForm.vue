@@ -44,13 +44,15 @@ const onSubmit = handleSubmit((values) => {
   <form class="f-form" @submit="onSubmit">
     <div>
       <div
-        v-for="{ name, title, sInputOptions } in fields"
+        v-for="({ name, title, sInputOptions }, index) in fields"
         :key="name"
         class="f-form_input-wrapper"
+        :class="{ 'mb-1.1rem!': index === fields.length - 1 }"
         mb-2
       >
         <SInput
           class="f-form_input"
+          :class="name"
           :input-class="inputClasses"
           :name="name"
           :title="title"
@@ -60,7 +62,9 @@ const onSubmit = handleSubmit((values) => {
       </div>
     </div>
     <div text-center>
-      <SBtn class="f-form_btn" type="submit">{{ $t('order.button') }}</SBtn>
+      <SBtn class="f-form_btn" type="submit">
+        {{ $t('order.button') }}
+      </SBtn>
     </div>
   </form>
 </template>

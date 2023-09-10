@@ -17,7 +17,7 @@ import OrderForm from './OrderForm.vue';
       z-0
       w-auto
       h-full
-      class="xl:(w-full h-auto)"
+      class="xl:(w-full h-auto) 3xl:(w-1920px h-full left-50% translate-x--50%)"
       select-none
       pointer-events-none
     />

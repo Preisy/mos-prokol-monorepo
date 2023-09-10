@@ -15,16 +15,18 @@ defineEmits<{
       grid
       grid-cols-1
       grid-rows-1
-      sm:grid-cols-3
-      sm:grid-rows-2
+      md:grid-cols-3
+      md:grid-rows-2
       gap-5
-      h-26rem
+      md:h-26rem
+      h-15rem
     >
       <div
         @click="$emit('imgSelected', src)"
         v-for="(src, index) in imgSrc"
         :key="src"
         :class="{ 'row-span-2 col-span-2': index === 0 }"
+        cursor-pointer
       >
         <q-img
           :src="src"

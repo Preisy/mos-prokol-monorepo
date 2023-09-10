@@ -40,6 +40,10 @@ const onImgSelect = (imgSrc: string) => {
 
       <SSlider
         min-h-12.5rem
+        max-w-23rem
+        mx-auto
+        md:max-w-unset
+        md:m-unset
         :length="buildedSlides.length"
         :parts="sliderParts"
       >
@@ -47,12 +51,19 @@ const onImgSelect = (imgSrc: string) => {
           v-for="(card, cardIndex) in buildedSlides"
           :key="cardIndex"
           v-bind="card"
+          cursor-pointer
           @img-selected="onImgSelect"
         />
       </SSlider>
 
-      <q-dialog ref="dialog" full-height>
-        <q-img :src="imgSource" fit="contain" overflow="hidden!" />
+      <q-dialog ref="dialog">
+        <q-img
+          :src="imgSource"
+          fit="contain"
+          select-none
+          pointer-events-none
+          overflow="hidden!"
+        />
       </q-dialog>
     </SStructure>
   </div>

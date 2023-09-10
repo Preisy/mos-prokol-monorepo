@@ -64,20 +64,21 @@ const brDelta = computed(() =>
           left="5/10"
           translate="-5/10"
           w-16
+          sm:w-26
           md:w-40
           xl:w-64
         />
       </div>
     </SStructure>
     <div
-      class="md:display-block"
+      class="md:display-block 4xl:left-65%"
       display-none
       absolute
       left="7/10"
       top-0
       bottom-0
       right-0
-      bg-black
+      bg-secondary5
       z-0
     />
   </div>

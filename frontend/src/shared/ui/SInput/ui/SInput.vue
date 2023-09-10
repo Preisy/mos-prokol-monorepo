@@ -16,11 +16,13 @@ const { value, errorMessage } = useField<string | number | undefined>(
 
 <template>
   <div text-base font-600>
-    <div text-secondary3 mb-1>
+    <div text-secondary3 mb-1 relative>
       <span>
         {{ title }}
       </span>
-      <span v-if="errorMessage" text-red-5 float-right>{{ errorMessage }}</span>
+      <span v-if="errorMessage" text-red-5 absolute right-0>{{
+        errorMessage
+      }}</span>
     </div>
 
     <div relative overflow-hidden rounded-0 class="[&>.q-field]:p-0">

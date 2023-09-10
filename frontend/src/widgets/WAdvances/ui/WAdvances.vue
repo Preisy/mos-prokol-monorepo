@@ -10,15 +10,25 @@ const { tm } = useI18n();
 <template>
   <div class="w-advances" overflow-hidden>
     <SStructure py-8>
-      <SPrettyHeader>{{ $t('advances.header') }}</SPrettyHeader>
+      <SPrettyHeader
+        left="50%"
+        translate-x="-50%"
+        absolute
+        md:static
+        md:translate-x-0
+      >
+        {{ $t('advances.header') }}
+      </SPrettyHeader>
       <div
         flex
         flex-col
         items-center
         md:flex-row
         justify-center
-        gap-x-9.6
+        gap-x-4
+        lg:gap-x-9.6
         gap-y-4
+        md:items-stretch
       >
         <AdvanceCard
           max-w-72

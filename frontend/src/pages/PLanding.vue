@@ -13,7 +13,16 @@ import { WStats } from 'widgets/WStats';
 </script>
 
 <template>
-  <div bg-secondary5>
+  <q-scroll-area
+    bg-secondary5
+    h-100vh
+    :vertical-thumb-style="{
+      mixBlendMode: 'difference',
+      opacity: '1',
+      zIndex: '2',
+      background: 'rgba(255,255,255,0.6)',
+    }"
+  >
     <WHeader></WHeader>
     <WHome />
     <WAboutUs></WAboutUs>
@@ -25,5 +34,5 @@ import { WStats } from 'widgets/WStats';
     <WStats />
     <WStages />
     <WFooter />
-  </div>
+  </q-scroll-area>
 </template>
