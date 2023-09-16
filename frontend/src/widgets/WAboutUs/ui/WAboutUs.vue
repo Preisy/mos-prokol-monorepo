@@ -37,7 +37,7 @@ const { tm } = useI18n();
         class="after-(block content-empty w-full h-full absolute top-0 left-0 bg-gradient-shadow-left) bg-wrapper 4xl:translate-x-49.7%"
       >
         <img
-          src="/mos-prokol-monorepo/widgets/WAboutUs/background.png"
+          src="widgets/WAboutUs/background.png"
           z-0
           brightness-70
           h-full

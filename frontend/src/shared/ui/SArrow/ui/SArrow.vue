@@ -2,7 +2,7 @@
 
 <template>
   <q-img
-    src="/mos-prokol-monorepo/shared/SArrow/arrow.svg"
+    src="shared/SArrow/arrow.svg"
     select-none
     pointer-events-none
   />

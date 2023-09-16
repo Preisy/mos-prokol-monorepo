@@ -21,7 +21,7 @@ import PriceSpreadsheet from './PriceSpreadsheet.vue';
         <PriceDescList></PriceDescList>
       </div>
       <img
-        src="/mos-prokol-monorepo/widgets/WPrice/background.png"
+        src="widgets/WPrice/background.png"
         absolute
         w="15/10"
         top-0

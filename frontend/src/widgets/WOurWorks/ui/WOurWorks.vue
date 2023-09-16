@@ -85,7 +85,7 @@ const onImgSelect = (imgSrc: string) => {
       </q-dialog>
 
       <q-img
-        src="/mos-prokol-monorepo/widgets/WOurWorks/arrow.png"
+        src="widgets/WOurWorks/arrow.png"
         absolute
         bottom-3.6
         sm:bottom-6

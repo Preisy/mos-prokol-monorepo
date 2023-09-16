@@ -27,7 +27,7 @@ const numbers: PhoneNumber[] = [
       <SPhoneNumber :numbers="numbers" />
     </SStructure>
     <img
-      src="/mos-prokol-monorepo/widgets/WHeader/background.svg"
+      src="widgets/WHeader/background.svg"
       h-24
       left="-2/10"
       md:left-auto

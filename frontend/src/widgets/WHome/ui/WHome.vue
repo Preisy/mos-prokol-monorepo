@@ -50,7 +50,7 @@ onMounted(
     </SStructure>
 
     <img
-      src="/mos-prokol-monorepo/widgets/WHome/background.png"
+      src="widgets/WHome/background.png"
       translate-x="-30%"
       sm:translate-x-none
       absolute

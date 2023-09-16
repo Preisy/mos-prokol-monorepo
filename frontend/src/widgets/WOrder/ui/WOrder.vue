@@ -9,7 +9,7 @@ import OrderForm from './OrderForm.vue';
       <OrderForm max-w-112></OrderForm>
     </SStructure>
     <img
-      src="/mos-prokol-monorepo/widgets/WOrder/background.png"
+      src="widgets/WOrder/background.png"
       absolute
       left-0
       top="50%"
