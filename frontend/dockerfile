@@ -1,0 +1,16 @@
+#build
+FROM node:16-alpine AS BUILDER
+WORKDIR /frontend
+COPY . .
+RUN yarn install
+RUN yarn run build
+
+#prepare nginx
+FROM nginx:alpine-slim as RUNNER
+WORKDIR /frontend
+COPY --from=BUILDER /frontend/dist/spa /var/www/mosprokol/dist
+COPY --from=BUILDER /frontend/.nginx /etc/nginx/
+
+#run
+EXPOSE 4000
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

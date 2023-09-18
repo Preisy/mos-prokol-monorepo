@@ -6,5 +6,18 @@
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.configPath": ""
+  "prettier.configPath": "",
+  "i18n-ally.localesPaths": [
+    "src/widgets/WAboutUs/i18n",
+    "src/widgets/WFooter/i18n",
+    "src/widgets/WAdvances/i18n",
+    "src/widgets/WHome/i18n",
+    "src/widgets/WOrder/i18n",
+    "src/widgets/WHeader/i18n",
+    "src/widgets/WOurServices/i18n",
+    "src/widgets/WPrice/i18n",
+    "src/widgets/WStages/i18n",
+    "src/widgets/WStats/i18n",
+    "src/widgets/WOurWorks/ui/i18n"
+  ]
 }

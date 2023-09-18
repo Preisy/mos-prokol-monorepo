@@ -28,7 +28,7 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ['i18n', 'axios', 'pinia'].map((boot) => '../app/boot/' + boot),
+    boot: ['i18n', 'axios', 'pinia'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ['../app/styles/app.scss'],
@@ -96,6 +96,7 @@ module.exports = configure(function (/* ctx */) {
         features: path.join(__dirname, 'src/features'),
         entities: path.join(__dirname, 'src/entities'),
         shared: path.join(__dirname, 'src/shared'),
+        boot: path.join(__dirname, 'src/app/boot')
       },
 
       // env: useEnv(),
