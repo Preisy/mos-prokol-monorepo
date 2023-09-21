@@ -7,8 +7,8 @@ import { SStructure } from 'shared/ui/SStructure';
 import FooterLinks from './FooterLinks.vue';
 
 const numbers: PhoneNumber[] = [
+  { grayPart: '8 (965) ', whitePart: '356-02-49', href: 'tel:89653560249' },
   { grayPart: '8 (916) ', whitePart: '848-86-23', href: 'tel:89168488623' },
-  { grayPart: '8 (965) ', whitePart: '356-02-49', href: 'tel:89168488623' },
 ];
 
 const targetElement = ref<HTMLElement>();
