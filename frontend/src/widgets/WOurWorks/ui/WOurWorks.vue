@@ -5,7 +5,6 @@ import { SCarousel } from 'shared/ui/SCarousel';
 import { SPrettyHeader } from 'shared/ui/SPrettyHeader';
 import { SStructure } from 'shared/ui/SStructure';
 import OurWorksSlide from './OurWorksSlide.vue';
-import VideoSlide from './VideoSlide.vue';
 
 interface Slide {
   type: 'photos' | 'video';
@@ -21,12 +20,6 @@ const slidesImages: Slide[] = [...Array(6).keys()].map((serialNumber) => ({
 
 const slides = computed<Slide[][]>(() => {
   const result = chunk(slidesImages, slideSize.value);
-  result.push([
-    {
-      type: 'video',
-      src: 'https://www.youtube.com/embed/nfmUAPOl3FU?si=-bcwb_zNvj1db1Lh',
-    },
-  ]);
   return result;
 });
 
@@ -65,11 +58,6 @@ const onImgSelect = (imgSrc: string) => {
             :name="index.toString()"
             :img-src="slide.map((item) => item.src)"
             @img-selected="onImgSelect"
-          />
-          <VideoSlide
-            v-if="slide.length === 1 && slide[0].type === 'video'"
-            :name="index.toString()"
-            :url="slide[0].src"
           />
         </template>
       </SCarousel>
