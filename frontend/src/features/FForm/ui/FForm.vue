@@ -17,6 +17,7 @@ export type FieldsSchema = FieldSchema[];
 const props = defineProps<{
   fields: FieldSchema[];
   inputClasses?: string;
+  action: (values: Record<string, unknown>) => void;
 }>();
 
 const validationSchema = toTypedSchema(
@@ -24,7 +25,7 @@ const validationSchema = toTypedSchema(
     props.fields.reduce(
       (all, currentField) => ({
         ...all,
-        [currentField.name]: currentField.rule,
+        [currentField.name]: currentField.rule
       }),
       {}
     )
@@ -32,12 +33,10 @@ const validationSchema = toTypedSchema(
 );
 
 const { handleSubmit } = useForm({
-  validationSchema,
+  validationSchema
 });
 
-const onSubmit = handleSubmit((values) => {
-  console.log(values);
-});
+const onSubmit = handleSubmit(props.action);
 </script>
 
 <template>
