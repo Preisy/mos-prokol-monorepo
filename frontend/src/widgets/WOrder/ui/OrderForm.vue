@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { FForm } from 'features/FForm';
+import { OrderDto, sendOrder } from 'shared/api/services';
 import { SArrow } from 'shared/ui/SArrow';
 import { fieldsSchema } from '../model';
 
 const { t } = useI18n();
 const fields = fieldsSchema(t);
+const onclickAction = (values: Record<string, unknown>) => {
+  const data = values as unknown as OrderDto;
+  console.log(data);
+  sendOrder(data);
+};
 </script>
 
 <template>
@@ -23,6 +29,7 @@ const fields = fieldsSchema(t);
     </div>
     <FForm
       input-classes="text-neutral-5/95 pt-9px! ml-12px! md:ml-16px!"
+      :action="onclickAction"
       :fields="fields"
       class="order-form"
       :class="{ mobile: $q.screen.lt.md }"

@@ -9,24 +9,24 @@ const phoneRegex = new RegExp(
 export const fieldsSchema = (t: ComposerTranslation): FieldSchema[] => {
   return [
     {
-      name: 'username',
+      name: 'name',
       title: 'Ваше имя',
       rule: z
         .string()
         .min(2, t('order.errors.nameShort'))
         .max(30, t('order.errors.nameLong')),
       sInputOptions: {
-        placeholder: 'Иван',
-      },
+        placeholder: 'Иван'
+      }
     },
     {
-      name: 'telephone',
+      name: 'phoneNumber',
       title: 'Телефон',
       rule: z.string().regex(phoneRegex, t('order.errors.telephoneRegexp')),
       sInputOptions: {
         mask: '# (###) ###-##-##',
-        placeholder: '8 (987) 654-32-10',
-      },
+        placeholder: '8 (987) 654-32-10'
+      }
     },
     {
       name: 'question',
@@ -35,7 +35,7 @@ export const fieldsSchema = (t: ComposerTranslation): FieldSchema[] => {
         .string()
         .min(6, t('order.errors.questionShort'))
         .max(2000, t('order.errors.questionLong')),
-      sInputOptions: { type: 'textarea' },
-    },
+      sInputOptions: { type: 'textarea' }
+    }
   ];
 };
