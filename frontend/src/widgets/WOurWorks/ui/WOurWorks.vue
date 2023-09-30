@@ -71,19 +71,6 @@ const onImgSelect = (imgSrc: string) => {
           overflow="hidden!"
         />
       </q-dialog>
-
-      <q-img
-        src="widgets/WOurWorks/arrow.png"
-        absolute
-        bottom-3.6
-        sm:bottom-6
-        right-0
-        sm:right--10
-        w-30
-        sm:w-60
-        select-none
-        pointer-events-none
-      />
     </SStructure>
   </div>
 </template>
