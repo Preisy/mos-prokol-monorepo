@@ -14,11 +14,15 @@ export interface FieldSchema {
 
 export type FieldsSchema = FieldSchema[];
 
-const props = defineProps<{
-  fields: FieldSchema[];
-  inputClasses?: string;
-  action: (values: Record<string, unknown>) => void;
-}>();
+const props = withDefaults(
+  defineProps<{
+    fields: FieldSchema[];
+    inputClasses?: string;
+    needReset?: boolean;
+    action: (values: Record<string, unknown>) => void;
+  }>(),
+  { needReset: true, inputClasses: '' }
+);
 
 const validationSchema = toTypedSchema(
   z.object(
@@ -32,11 +36,14 @@ const validationSchema = toTypedSchema(
   )
 );
 
-const { handleSubmit } = useForm({
+const { handleSubmit, resetForm } = useForm({
   validationSchema
 });
 
-const onSubmit = handleSubmit(props.action);
+const onSubmit = handleSubmit((data) => {
+  props.action(data);
+  if (props.needReset) resetForm();
+});
 </script>
 
 <template>

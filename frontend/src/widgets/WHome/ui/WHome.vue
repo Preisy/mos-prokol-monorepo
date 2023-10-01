@@ -60,7 +60,7 @@ onMounted(
       h-full
       select-none
       pointer-events-none
-      class="3xl:(w-full h-auto) 4xl:(w-1920px h-full left-50% translate-x--50%)"
+      class="xl:(w-full h-auto) 4xl:(w-1920px h-auto left-50% translate-x--50%)"
     />
   </div>
 </template>

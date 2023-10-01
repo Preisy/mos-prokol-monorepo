@@ -13,9 +13,9 @@ interface Slide {
 
 const q = useQuasar();
 const slideSize = computed(() => (q.screen.lt.md ? 1 : 3));
-const slidesImages: Slide[] = [...Array(6).keys()].map((serialNumber) => ({
+const slidesImages: Slide[] = [...Array(9).keys()].map((serialNumber) => ({
   type: 'photos',
-  src: `widgets/WOurWorks/${serialNumber}.png`,
+  src: `widgets/WOurWorks/${serialNumber}.png`
 }));
 
 const slides = computed<Slide[][]>(() => {

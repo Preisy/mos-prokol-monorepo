@@ -4,13 +4,17 @@ import { FForm } from 'features/FForm';
 import { OrderDto, sendOrder } from 'shared/api/services';
 import { SArrow } from 'shared/ui/SArrow';
 import { fieldsSchema } from '../model';
+import AcceptDialog from './AcceptDialog.vue';
 
 const { t } = useI18n();
 const fields = fieldsSchema(t);
+const dialog = ref<InstanceType<typeof AcceptDialog>>();
+
 const onclickAction = (values: Record<string, unknown>) => {
   const data = values as unknown as OrderDto;
-  console.log(data);
   sendOrder(data);
+
+  dialog.value?.show();
 };
 </script>
 
@@ -42,6 +46,11 @@ const onclickAction = (values: Record<string, unknown>) => {
       z-2
       translate-y="5.3/10"
       class="md-(translate-y--47% rotate-290deg right--4.7rem left-auto w-8.5rem)"
+    />
+    <AcceptDialog
+      ref="dialog"
+      :text="$t('order.dialog.text')"
+      :button-text="$t('order.dialog.btn')"
     />
   </div>
 </template>
