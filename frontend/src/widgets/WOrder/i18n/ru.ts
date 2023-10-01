@@ -5,14 +5,18 @@ export default {
     button: 'Оставить заявку',
     fields: {
       telephone: 'Телефон',
-      question: 'Ваш вопрос',
+      question: 'Ваш вопрос'
     },
     errors: {
       telephoneRegexp: 'Неверный номер',
       questionShort: 'Минимум - 6 символов',
       questionLong: 'Максимум - 256 символов',
       nameShort: 'Минимум - 2 символа',
-      nameLong: 'Максимум - 30 символов',
+      nameLong: 'Максимум - 30 символов'
     },
-  },
+    dialog: {
+      text: 'Ваша заявка отправлена! Ожидайте ответа!',
+      btn: 'Отлично!'
+    }
+  }
 };

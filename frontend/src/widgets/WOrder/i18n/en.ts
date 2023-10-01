@@ -5,14 +5,18 @@ export default {
     button: 'Submit',
     fields: {
       telephone: 'Telephone',
-      question: 'Your question',
+      question: 'Your question'
     },
     errors: {
       telephoneRegexp: 'Wrong number',
       questionShort: 'Minumum - 6',
       questionLong: 'Maximum - 2000',
       nameShort: 'Minimum - 2',
-      nameLong: 'Maximum - 30',
+      nameLong: 'Maximum - 30'
     },
-  },
+    dialog: {
+      text: 'Your order has been sent!',
+      btn: 'Thanks!'
+    }
+  }
 };
