@@ -1,12 +1,17 @@
 export default {
   price: {
-    spreadsheet: {
-      header: 'Price',
-      firstRow: {
-        diameter: 'Puncture diameter, mm',
-        price: 'Price, rub/m',
+    spreadsheets: {
+      base: {
+        title: 'Price',
+        header: {
+          diameter: 'Puncture diameter, mm',
+          price: 'Price, rub/m'
+        }
       },
-      pretext: 'from',
+      pnd: {
+        title: 'Pnd module'
+      },
+      pretext: 'from'
     },
     description:
       'The final price of laying is calculated after familiarization with the object.',
@@ -16,8 +21,8 @@ export default {
         'type, diameter and number of pipes;',
         'type of soil;',
         'depth and length of the pipeline;',
-        'other factors;',
-      ],
-    },
-  },
+        'other factors;'
+      ]
+    }
+  }
 };
