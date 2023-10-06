@@ -17,9 +17,9 @@ const tables: Array<PriceSpreadsheetProps> = [
     rows: [
       { param: 32, price: 1100 },
       { param: 63, price: 1350 },
-      { param: 110, price: 1500 },
-      { param: 160, price: 2500 },
-      { param: 225, price: 2900 }
+      { param: 110, price: 2200 },
+      { param: 160, price: 2700 },
+      { param: 225, price: 3200 }
     ]
   },
   {
